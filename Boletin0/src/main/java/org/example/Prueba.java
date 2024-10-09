@@ -2,7 +2,7 @@ package org.example;
 import java.util.Scanner;
 //ES UN PROGRAMA QUE A PARTIR DEL NUMERO QUE LE DES DICE EL DIA,MES Y AÑO EXISTENTES(EN FORMA DE NUMERO)
 
-public class Prueba {
+public class Prueba 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         /* String mes1=enero;

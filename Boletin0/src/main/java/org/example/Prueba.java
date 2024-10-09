@@ -5,20 +5,7 @@ import java.util.Scanner;
 public class Prueba {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        /* String mes1=enero;
-         String mes2=febrero;
-         String mes3=marzo;
-         String mes4=abril;
-         String mes5=mayo;
-         String mes6=junio;
-         String mes7=julio;
-         String mes8=agosto;
-         String mes9=septiembre;
-         String mes10=octubre;
-         String mes11=noviembre;
-         String mes12=diciembre;*/
-    //Aqui quiero corresponder el numero que me pongas al mes casi exacto
-        //ej: dame un mes:230 -> error solo existen 12 meses y cuando ponga un numero entre 1 -12 que diga el mes al que le corresponda
+      
 
 
         long dia;

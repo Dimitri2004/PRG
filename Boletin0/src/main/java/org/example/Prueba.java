@@ -7,46 +7,53 @@ public class Prueba {
         Scanner s = new Scanner(System.in);
       
 
-
+/*variable long dia por si nos colocan mas numeros de los que necesitamos*/
         long dia;
 
         System.out.println("Dime un día: ");
         dia=s.nextLong();
-
+/*Condicion de repeticion y dentro de esta otra condicion de repeticion hasta que se cumplan las condiciones que limitamos*/
         do{
+            /*condicion de numero representante de un dia superior a un mes dado*/
             if(dia>31){
                 do{
+                    /*Salida de datos de dias que hemos limitado */
                     System.out.println("Solo sirven los dias entre 1-30");
                     System.out.println("Dime otro día: ");
+                    /*variable dia puesta en datos para salida */
                     dia=s.nextLong();
                 }while(dia>31);
-            } else {
+            } else {}
+            /*repetir condicion hasta que se cumplan las caracteristicas del dia*/
+        }while(dia>31);
 
-            }}while(dia>31);
-
-
+/*Condicion de repeticion para hacer q el dia puesto sea correcto*/
         do{
             if(dia<=1){
+                /*Salida de condiciones para corregir el numero puesto en terminal*/
                 System.out.println("No me valen negativos o nulos");
                 System.out.println("Dime otro día: ");
                 dia=s.nextLong();
             }else{
             }
             do{
+                /*Condicion de numeros superiores al de los meses establecidos*/
                 if (dia>31){
                     System.out.println("Solo sirven los dias entre 1-30");
                     System.out.println("Dime otro día: ");
                     dia=s.nextLong();
                 }
+                /*Repetir hasta que se cumpla el mes establecido*/
             }while(dia>31);
 
 
         }while(dia<=0);
-
+/*Definimos variable long mes de datos puestos en terminal*/
         long mes;
 
         System.out.println("Dame un mes: ");
         mes= s.nextLong();
+        /*Condicion de repeticion del mes hasta que se*/
         do{
             if(mes<=12){
 

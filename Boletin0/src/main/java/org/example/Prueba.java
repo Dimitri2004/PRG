@@ -56,37 +56,45 @@ public class Prueba {
         /*Condicion de repeticion del mes hasta que se*/
         do{
             if(mes<=12){
-                /*Condicion de mes*/
+                /*Condicion del mes que queremos obtener*/
 
             }else{
+                /*Salida de restricciones del mes*/
                 System.out.println("Solo existen 12 meses ");
                 System.out.println("Dame otro mes: ");
                 mes= s.nextLong();
             }
+            /*Repeticion del do mientras no se obtenga el numero q necesitamos*/
         }while(mes>12);
+        /*Condicion de mes superior al mes estandar*/
 
         do{
             if(mes<=1){
+                /*Salida de las restricciones del numero que nos dieron*/
                 System.out.println("No me valen negativos o nulos");
                 System.out.println("Dime otro mes: ");
                 mes=s.nextLong();
             }else{
             }
+            
             do{
                 if (mes>12){
                     System.out.println("Solo sirven los meses entre 1-12");
                     System.out.println("Dime otro mes: ");
                     mes=s.nextLong();
                 }
+                /*Repeticion de condiciones hasta obtener el resultado que qieremos*/
             }while(mes>12);
 
 
         }while(mes<=0);
 
-
+    /*Variable año*/
 
         long año;
+        /*Crear una condicion de año superior al actual*/
         do{
+            
             System.out.println("Dame un año: ");
             año=s.nextLong();
 
@@ -94,11 +102,14 @@ public class Prueba {
                 System.out.println("Aún no hemos llegado a este año, dime otro inferior: ");
             }else{}
         }while (año>2024);
+        /*Negar la existencia del año nulo*/
         if (año==0){System.out.println("No existe el año 0");
         }else{
         }
+        /*Crear operaciones en caso de que el año q nos den sea negativo*/
 
         if(año<0){
+            /*Salida de los resultados escritos en los anteriores casos*/
 
             System.out.println("La fecha que quieres es: " + dia +"/"+ mes +"/"+ año*-1 + " Ac");
         }else{

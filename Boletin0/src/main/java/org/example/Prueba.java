@@ -56,6 +56,7 @@ public class Prueba {
         /*Condicion de repeticion del mes hasta que se*/
         do{
             if(mes<=12){
+                /*Condicion de mes*/
 
             }else{
                 System.out.println("Solo existen 12 meses ");

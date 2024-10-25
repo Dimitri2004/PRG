@@ -15,4 +15,8 @@ __4.-En el caso del fork es muy sencillo, abres el repositorio q quieres copiar 
 ## 2.Clonar y añadir  a mi repositorio
 
 
-__1.-Descargamos el code del repositorio y extraemos el zip, una vez extraido vas a Intellij y abres el documento, seleccionas en las tres barras laterales la opcion git, y en esta la opcion clone
+__1.-Descargamos el code del repositorio y extraemos el zip__
+
+__2.-Una vez extraido vas a Intellij y abres el documento, seleccionas en las tres barras laterales la opcion git, y en esta la opcion de manage remote__
+
+__3.-Despues añades un repositorio donde copiar el documento__

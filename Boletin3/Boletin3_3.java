@@ -7,8 +7,8 @@ package com.danielcastelao.newproyect.Proyectos.Prog;
 import java.util.Scanner;
 
 /**
- *
- * @author dam
+ *@version 1.1
+ * @author Dima Aparicio
  */
 public class Boletin3_3 {
       public static void main(String[] args){

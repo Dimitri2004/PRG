@@ -6,9 +6,9 @@ package com.danielcastelao.newproyect.Proyectos.Prog;
 
 import java.util.Scanner;
 
-/**
- *
- * @author dam
+/**Calcula la suma o resta de valores que son uno menor que otro
+ *@version 1.0
+ * @author Dima Aparicio
  */
 public class Boletin3_2 {
       public static void main(String[] args){

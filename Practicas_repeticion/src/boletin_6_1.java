@@ -6,7 +6,7 @@
 
 import java.util.Scanner;
 
-public class boletin_6_1 {
+public class Ejercicio_dos_enteros {
     public static void main(String[] args){
         enteros();
     }
@@ -22,5 +22,6 @@ public class boletin_6_1 {
         for(int i=n1+1;i<n2;i++){
             System.out.println(i);
         }
+
     }
 }

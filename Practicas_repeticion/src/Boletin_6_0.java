@@ -9,7 +9,7 @@
 
 import java.util.Scanner;
 
-public class Boletin_6_0 {
+public class Repeticiones_practica {
    public static void main(String[] args){
        String nomeEstudante=obterNome();
        saudos(3,"es");

@@ -1,3 +1,9 @@
+/*Crea multiplos del nº 7
+*@version 1.0
+*@autor Dima aparicio
+*/
+
+
 public class Multiplos_Boletin4 {
     public static void main(String[] args){
 /*Bucle que repite procesos a partir de unas condiciones */

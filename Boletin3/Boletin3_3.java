@@ -6,7 +6,7 @@ package com.danielcastelao.newproyect.Proyectos.Prog;
 
 import java.util.Scanner;
 
-/**
+/**Da valores a positivos negativos y nulos con sus repectivos simbolos
  *@version 1.1
  * @author Dima Aparicio
  */

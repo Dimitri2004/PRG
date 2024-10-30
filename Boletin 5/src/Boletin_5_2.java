@@ -16,7 +16,7 @@ int suma;
         mult = mult * i;
     }
            System.out.println("SUMA: "+ suma);
-           System.out.println("Producto: "+mult);
+           System.out.println("Producto: "+ mult);
 
     }
 }

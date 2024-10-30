@@ -1,3 +1,11 @@
+/*Este programa detecta si el numero escrito es negativo positivo o cero
+*@version 1.0
+*@autor Dima Aparicio
+*/
+
+
+
+
 import java.util.Scanner;
 
 public class Boletin_5_1 {

@@ -1,3 +1,9 @@
+/*Calcula el factorial de un numero que des por consola
+*@version 1.0
+*@autor Dima Aparicio
+*/
+
+
 import java.util.Scanner;
 
 public class Boletin_5_6 {

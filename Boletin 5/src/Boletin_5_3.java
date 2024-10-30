@@ -1,3 +1,9 @@
+/*Calcula el area del triangulo escribiendo la base y la altura por teclado
+*@version 1.0
+*@autor Dima Aparicio
+*/
+
+
 import java.util.Scanner;
 
 public class Boletin_5_3 {

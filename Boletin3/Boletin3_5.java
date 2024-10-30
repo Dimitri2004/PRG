@@ -4,9 +4,9 @@
  */
 package com.danielcastelao.newproyect.Proyectos.Prog;
 import java.util.Scanner;
-/**
- *
- * @author dam
+/**Ordena de mayor a menor los numero colocados en consola
+ *@version 1.1
+ * @author Dima Aparicio 
  */
 public class Boletin3_5 {
     public static void main(String[] args){

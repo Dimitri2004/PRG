@@ -1,3 +1,9 @@
+/*Te da la tabla de multiplicar de cualquier numero que escribas por consola
+*@version 1.0
+*@autor Dima Aparicio
+*/
+
+
 import java.util.Scanner;
 
 public class Boletin_5_4 {

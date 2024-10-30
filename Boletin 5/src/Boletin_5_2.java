@@ -1,10 +1,10 @@
-import java.util.Scanner;
+/*Calcula la suma y producto de numeros entre 10-90
+*@version 1.0
+*@autor Dima Aparicio
+*/
 
 public class Boletin_5_2 {
     public static void main(String[] args){
-Scanner sc=new Scanner(System.in);
-
-
 int n;
     n=1;
 int suma;
@@ -16,7 +16,7 @@ int suma;
         mult = mult * i;
     }
            System.out.println("SUMA: "+ suma);
-           System.out.println("Producto: "+mult);
+           System.out.println("Producto: "+ mult);
 
     }
 }

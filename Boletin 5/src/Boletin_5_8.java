@@ -1,6 +1,10 @@
+/*Calcula la suma de numeros menores de 999 que le des en maquina
+*@version 1.0
+*@autor Dima Aparicio
+*/
 import java.util.Scanner;
 
-public class Boletin_5_7 {
+public class Boletin_5_8{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n1;

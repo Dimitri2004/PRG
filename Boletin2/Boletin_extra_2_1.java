@@ -4,9 +4,9 @@
  */
 package com.danielcastelao.newproyect.Proyectos.Prog;
 import java.util.Scanner;
-/**
- *
- * @author dam
+/**Calcula la oferta de un producto en el momento de comprarlo
+ *@version 1.0
+ * @author Dima Aparicio
  */
 public class Boletin_extra_2_1 {
     public static void main(String[] args){

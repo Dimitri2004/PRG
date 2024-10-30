@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**Pasa de grados centigrados a grados kelvin
  *@version 1.1
- * @author dam
+ * @author Dima Aparicio
  */
 public class Boletin_extra_2_2 {
     public static void main(String[] args){

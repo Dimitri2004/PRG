@@ -1,4 +1,4 @@
-/*Calcula el area del triangulo escribiendo la base y la altura por teclado
+/*Calcula el area del rectangulo escribiendo la base y la altura por teclado
 *@version 1.0
 *@autor Dima Aparicio
 */

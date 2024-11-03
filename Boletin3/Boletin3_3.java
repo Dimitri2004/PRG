@@ -13,9 +13,11 @@ import java.util.Scanner;
 public class Boletin3_3 {
       public static void main(String[] args){
     Scanner sc=new Scanner(System.in);
+            /*Pedimos variable por consola*/
     System.out.println("Dame un numero: ");
     int a;
     a=sc.nextInt();
+            /*Creamos una funcion de condicion para los casos del numero que nos escriba en maquina*/
     if (a>0){
         System.out.println("+");
     

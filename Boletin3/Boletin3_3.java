@@ -23,6 +23,7 @@ public class Boletin3_3 {
     
     }else{}
     if(a<0){
+          /*Segunda condicion de la variable que me han dado*/
     System.out.println("-");
     }{}
     if (a==0){

@@ -1,28 +1,23 @@
 public class Boletin_6_9 {
     public static void main(String[] args) {
-       suma(0);
-
-    }
-
-
-    static long suma(int n) {
-        int a1;
-        int m;
-        for (m = 1; m <=10; m++) {
-            if (m<n) {
-
-                a1= m + (-1*n);
-
-                System.out.println(a1++);
-                return n=-1;
-            }
-            else {
-                a1= m + (-1*n);
-                System.out.println(a1++);
-                return n=1;
-            }
+       int num2;
+       int num1;
+       num1=0;
+       num2=1;
+        int ns = 0;
+        int elementos = 10;
+        for (int i = 0; i <= elementos; i++) {
+            ns = sucesion(num1, num2);
+            num1 = num2;
+            num2 = ns;
         }
-
-        return n;
+    }
+    static int sucesion(int a, int b) {
+        int suma =a+b;
+        System.out.println(suma);
+        return suma;
     }
 }
+
+
+

@@ -9,7 +9,7 @@ public class Boletin_7_2 {
     }
 
     static void notas() {
-        int[] nota = new int[30];
+        int[] nota = new int[30];/**Damos a una variable arrays el valor que la delimita**/
         for (int i = 1; i < nota.length; i++) {
             nota[i] = (int) Math.floor(Math.random() * 10) + 1;
 

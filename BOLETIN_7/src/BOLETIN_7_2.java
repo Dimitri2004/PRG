@@ -17,7 +17,6 @@ public class BOLETIN_7_2 {
             } else {
                 System.out.println("Aprobado = " + nota[i]);
             }
-
             num = nota[i];
             res += num;
         }

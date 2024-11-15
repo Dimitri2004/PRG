@@ -1,0 +1,349 @@
+Index: src/Ejercicio_lectura_Num.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/* A partir de dos numeros, uno decimal y otro entero te dice el equivalentes en letras*/\n\n\n\n\n\n\nimport java.util.Scanner;\n\npublic class Ejercicio_lectura_Num {\n\n    public static void main(String[] args){\n\n        Scanner sc=new Scanner(System.in);\n\n        String numero=\"\";\n\n        String numero2=\"\";\n\n       int numero_d;\n\n       int numero_u;\n\n       numero_d=9;\n\n       numero_u=9;\n\n\n       /*Preguntar una variable terminada en cero*/\n\n        System.out.println(\"Dame una decimal terminado en cero del 10-90:\");\n        numero_d=sc.nextInt();\n\n        /*Preguntar una variable entera*/\n\n        System.out.println(\"Dame un numero entero del 1-9:\");\n        numero_u=sc.nextInt();\n\n    /*Discrimina las distintas opciones de las decenas*/\n\n        switch (numero_d){\n\n            case 0:\n\n                /*Nos da un caso especial de 0 0*/\n\n                if (numero_d==0){\n\n                    if (numero_u==0){\n\n                        System.out.println(\"cero\");\n                    }\n                }\n\n            case 10:\n\n                /*Me dice los casos especiales de los decimales que empiezan por uno con enteros del 1 al 5*/\n\n                if (numero_d==1) {\n\n                    if (numero_u==1){\n\n                        System.out.println(\"once\");\n                    }\n                    if (numero_u == 2) {\n\n                        System.out.println(\"doce\");\n                    }\n                    if (numero_u == 3) {\n\n                        System.out.println(\"trece\");\n                    }\n                    if (numero_u == 4) {\n\n                        System.out.println(\"catorce\");\n                    }\n                    if (numero_u == 5) {\n\n                        System.out.println(\"quince\");\n                    }\n\n\n                    /*Decir los casos con decimal empezando por 1 perocon enteros mayores de 5*/\n\n                }else{\n\n                    if (numero_d!=0) {\n\n                        numero = (\"diez\");\n                    }\n                    else{\n\n                        System.out.println(numero2);\n                    }\n                }\n                break;\n\n            case 20:\n\n               numero = (\"veinte\");\n\n               break;\n\n            case 30:\n\n                numero = (\"treinta\");\n\n                break;\n\n            case 4:\n\n                numero = (\"cuarenta\");\n\n                break;\n\n            case 50:\n\n                numero = (\"cincuenta\");\n\n                break;\n\n            case 60:\n\n                numero = (\"sesenta\");\n\n                break;\n\n            case 70:\n\n                numero = (\"setenta\");\n\n                break;\n\n            case 80:\n\n                numero = (\"ochenta\");\n\n                break;\n\n            case 90:\n\n                numero = (\"noventa\");\n\n                break;\n        }\n\n       /*Discrimina las opciones de enteros*/\n\n        switch (numero_u){\n\n     /*Dos posibilidades, las del decimal que empieza por cero y las del decimal que empieza por por número distinto de cero*/\n\n            case 1:\n\n                if (numero_d!=0) {\n\n                    numero2 = (\"iuno\");\n\n                }else{\n\n                    numero2 = (\"uno\");\n                }\n                break;\n\n            case 2:\n\n                if (numero_d!=0) {\n\n                    numero2 = (\"idos\");\n\n                }else{\n\n                    numero2 = (\"dos\");\n                }\n                break;\n\n            case 3:\n\n                if (numero_d!=0) {\n\n                    numero2 = (\"itres\");\n\n                }else{\n\n                    numero2 = (\"tres\");\n                }\n                break;\n\n            case 4:\n\n                if (numero_d!=0) {\n\n                    numero2 = (\"icuatro\");\n\n                }else{\n\n                    numero2 = (\"cuatro\");\n                }\n                break;\n\n            case 5:\n\n                if (numero_d!=0) {\n\n                    numero2 = (\"icinco\");\n\n                }else{\n\n                    numero2 = (\"cinco\");\n                }\n                break;\n\n            case 6:\n\n                if (numero_d!=0) {\n\n                    numero2 = (\"iseis\");\n\n                }else {\n\n                    numero2 = (\" seis\");\n                }\n                break;\n\n            case 7:\n\n                if (numero_d!=0) {\n\n                    numero2 = (\"isiete\");\n\n                }else {\n\n                    numero2 = (\" siete\");\n                }\n                break;\n\n            case 8:\n\n                if (numero_d!=0) {\n\n                    numero2 = (\"iocho\");\n\n                }else {\n\n                    numero2 = (\" ocho\");\n                }\n                break;\n\n            case 9:\n\n                if (numero_d!=0) {\n\n                    numero2 = (\"inueve\");\n\n                }else {\n\n                    numero2 = (\" nueve\");\n                }\n                break;\n        }\n        System.out.println(numero+numero2);\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Ejercicio_lectura_Num.java b/src/Ejercicio_lectura_Num.java
+--- a/src/Ejercicio_lectura_Num.java	(revision 91917e7b78e03d0b3ddfef9982a8bd9515e90fc4)
++++ b/src/Ejercicio_lectura_Num.java	(date 1729510891656)
+@@ -8,256 +8,116 @@
+ import java.util.Scanner;
+ 
+ public class Ejercicio_lectura_Num {
+-
+     public static void main(String[] args){
+-
+         Scanner sc=new Scanner(System.in);
+-
+         String numero="";
+-
+         String numero2="";
+-
+        int numero_d;
+-
+        int numero_u;
+-
+        numero_d=9;
+-
+        numero_u=9;
+-
+-
+-       /*Preguntar una variable terminada en cero*/
+-
+-        System.out.println("Dame una decimal terminado en cero del 10-90:");
++      /*Preguntar una variable terminada en cero*/
++        System.out.println("Dame un numero:");
+         numero_d=sc.nextInt();
+-
+         /*Preguntar una variable entera*/
+-
+-        System.out.println("Dame un numero entero del 1-9:");
+-        numero_u=sc.nextInt();
+-
++    int numero_c;
++       numero_c=numero_d/10;
++        numero_u=numero_d-10*numero_c;
+     /*Discrimina las distintas opciones de las decenas*/
+-
+-        switch (numero_d){
+-
++        switch (numero_c){
+             case 0:
+-
+                 /*Nos da un caso especial de 0 0*/
+-
+                 if (numero_d==0){
+-
+                     if (numero_u==0){
+-
+                         System.out.println("cero");
+                     }
+                 }
+-
+-            case 10:
+-
+-                /*Me dice los casos especiales de los decimales que empiezan por uno con enteros del 1 al 5*/
+-
+-                if (numero_d==1) {
+-
+-                    if (numero_u==1){
+-
+-                        System.out.println("once");
+-                    }
+-                    if (numero_u == 2) {
+-
+-                        System.out.println("doce");
+-                    }
+-                    if (numero_u == 3) {
+-
+-                        System.out.println("trece");
+-                    }
+-                    if (numero_u == 4) {
+-
+-                        System.out.println("catorce");
+-                    }
+-                    if (numero_u == 5) {
+-
+-                        System.out.println("quince");
+-                    }
+-
+-
+-                    /*Decir los casos con decimal empezando por 1 perocon enteros mayores de 5*/
+-
+-                }else{
+-
+-                    if (numero_d!=0) {
+-
+-                        numero = ("diez");
+-                    }
+-                    else{
+-
+-                        System.out.println(numero2);
+-                    }
+-                }
++            case 1:
++                switch (numero_c){
++                    case 1:
++                        if (numero_u==1) numero="diez";
++                        else if(numero_u==2) numero="doce";
++                        else if(numero_u==3) numero="trece";
++                        else if(numero_u==4) numero="catorce";
++                        else if(numero_u==5) numero="quince";
++               }
+                 break;
+-
+-            case 20:
+-
+-               numero = ("veinte");
+-
++            case 2:
++               numero = ("veint");
+                break;
+-
+-            case 30:
+-
++            case 3:
+                 numero = ("treinta");
+-
+                 break;
+-
+             case 4:
+-
+                 numero = ("cuarenta");
+-
+                 break;
+-
+-            case 50:
+-
++            case 5:
+                 numero = ("cincuenta");
+-
+                 break;
+-
+-            case 60:
+-
++            case 6:
+                 numero = ("sesenta");
+-
+                 break;
+-
+-            case 70:
+-
++            case 7:
+                 numero = ("setenta");
+-
+                 break;
+-
+-            case 80:
+-
++            case 8:
+                 numero = ("ochenta");
+-
+                 break;
+-
+-            case 90:
+-
++            case 9:
+                 numero = ("noventa");
+-
+                 break;
+         }
+-
+        /*Discrimina las opciones de enteros*/
+-
++stop:
+         switch (numero_u){
+-
+      /*Dos posibilidades, las del decimal que empieza por cero y las del decimal que empieza por por número distinto de cero*/
+-
+             case 1:
+-
+-                if (numero_d!=0) {
+-
+-                    numero2 = ("iuno");
+-
+-                }else{
+-
++                if (numero_c!=1) {
+                     numero2 = ("uno");
+                 }
+                 break;
+-
+             case 2:
+-
+-                if (numero_d!=0) {
+-
+-                    numero2 = ("idos");
+-
+-                }else{
+-
++                if (numero_c!=1) {
+                     numero2 = ("dos");
+                 }
+-                break;
+-
++            break;
+             case 3:
+-
+-                if (numero_d!=0) {
+-
+-                    numero2 = ("itres");
+-
+-                }else{
+-
++                if (numero_c!=1) {
+                     numero2 = ("tres");
+                 }
+                 break;
+ 
+             case 4:
+-
+-                if (numero_d!=0) {
+-
+-                    numero2 = ("icuatro");
+-
+-                }else{
+-
++                if (numero_c!=1) {
+                     numero2 = ("cuatro");
+                 }
+                 break;
+-
+             case 5:
+-
+-                if (numero_d!=0) {
+-
+-                    numero2 = ("icinco");
+-
+-                }else{
+-
++                if (numero_c!=1) {
+                     numero2 = ("cinco");
+                 }
+                 break;
+-
+             case 6:
+ 
+-                if (numero_d!=0) {
+-
+-                    numero2 = ("iseis");
+-
+-                }else {
+-
+-                    numero2 = (" seis");
++                if (numero_c!=1) {
++                    numero2 = ("seis");
+                 }
+                 break;
+-
+             case 7:
+-
+-                if (numero_d!=0) {
+-
+-                    numero2 = ("isiete");
+-
+-                }else {
+-
+-                    numero2 = (" siete");
++                if (numero_c!=1) {
++                    numero2 = ("siete");
+                 }
+                 break;
+-
+             case 8:
+-
+-                if (numero_d!=0) {
+-
+-                    numero2 = ("iocho");
+-
+-                }else {
+-
+-                    numero2 = (" ocho");
++                if (numero_c!=1) {
++                    numero2 = ("ocho");
+                 }
+                 break;
+-
+-            case 9:
+-
+-                if (numero_d!=0) {
+-
+-                    numero2 = ("inueve");
+-
+-                }else {
+-
+-                    numero2 = (" nueve");
++            case 9 :
++                if (numero_c!=1) {
++                    numero2 = ("nueve");
+                 }
+                 break;
+-        }
+-        System.out.println(numero+numero2);
++        }System.out.println(numero +""+numero2);
+     }
+ }
+Index: ../Boletin2/Boletin2_3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license\n * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template\n */\npackage com.danielcastelao.newproyect.Proyectos.Prog;\nimport java.util.Scanner;\n/**\n *\n * @author dam\n */\npublic class Boletin2_3 {\n   public static void main(String[] args){\n       Scanner s=new Scanner(System.in);\n    System.out.println(\"Dimecual es tu nombre?:\");\n    String nombre;\n     nombre = s.nextLine();\n    System.out.println(\"Hola \"+ nombre);\n    System.out.println(\"Cuantos euros quieres cambiar a dólares?:\");\n     int dinero;\n     dinero=s.nextInt();\n     double dolares = dinero*(1.11);\n     System.out.println(\"Tienes \"+ dolares  +\" $\");\n s.close();\n    \n    \n    \n    \n}\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Boletin2/Boletin2_3.java b/../Boletin2/Boletin2_3.java
+--- a/../Boletin2/Boletin2_3.java	(revision 91917e7b78e03d0b3ddfef9982a8bd9515e90fc4)
++++ b/../Boletin2/Boletin2_3.java	(date 1729236759086)
+@@ -1,12 +1,10 @@
+-/*
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+- */
++
+ package com.danielcastelao.newproyect.Proyectos.Prog;
+ import java.util.Scanner;
+-/**
+- *
+- * @author dam
++
++/**Cambio de euros a dolares
++ * @version 1.1
++ * @author Dima Aparicio
+  */
+ public class Boletin2_3 {
+    public static void main(String[] args){
+@@ -15,10 +13,13 @@
+     String nombre;
+      nombre = s.nextLine();
+     System.out.println("Hola "+ nombre);
++    /*Definir variable dinero con Int*/
+     System.out.println("Cuantos euros quieres cambiar a dólares?:");
+      int dinero;
+      dinero=s.nextInt();
++     /*variable operacion de cambio creada*/
+      double dolares = dinero*(1.11);
++     /*Salida de operacion*/
+      System.out.println("Tienes "+ dolares  +" $");
+  s.close();
+     

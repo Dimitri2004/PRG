@@ -1,0 +1,407 @@
+Index: ../Boletin2/Boletin2_2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license\n * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template\n */\npackage com.danielcastelao.newproyect.Proyectos.Prog;\n\n/**\n *\n * @author dam\n */\npublic class Boletin2_2 {\n    public static void main(String[] args){\n    int l=3;\n    int area=l*l;\n    System.out.println(\"El área de tu cuadrado de lado 3 es: \"+area);\n       \n    }    \n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Boletin2/Boletin2_2.java b/../Boletin2/Boletin2_2.java
+--- a/../Boletin2/Boletin2_2.java	(revision 91917e7b78e03d0b3ddfef9982a8bd9515e90fc4)
++++ b/../Boletin2/Boletin2_2.java	(date 1729236758938)
+@@ -1,17 +1,17 @@
+-/*
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+- */
++
+ package com.danielcastelao.newproyect.Proyectos.Prog;
+ 
+-/**
+- *
+- * @author dam
+- */
++/**Calculo de area de un cuadrado conocido su lado
++ * @version 1.1
++  * @author Dima Aparicio
++  * **/
+ public class Boletin2_2 {
+     public static void main(String[] args){
++        /*Valor Int del lado*/
+     int l=3;
++    /*Operacion area*/
+     int area=l*l;
++    /*Salida de operacion*/
+     System.out.println("El área de tu cuadrado de lado 3 es: "+area);
+        
+     }    
+Index: ../Boletin2/Boletin_extra_2_2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license\n * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template\n */\npackage com.danielcastelao.newproyect.Proyectos.Prog;\n\nimport java.util.Scanner;\n\n/**\n *\n * @author dam\n */\npublic class Boletin_extra_2_2 {\n    public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    double grados;\n    System.out.println(\"A cuantos grados estamos?: \");\n    grados=sc.nextDouble();\n    System.out.println(\"Cuanto es en Kelvin?\");\n    double kelvin=(grados+273.15);\n        System.out.println(\"Son: \"+kelvin+\" K\");\n        System.out.println(\"Y en Fharenheit? \");\n    double fharenheit=(grados*(9/5)+32);\n        System.out.println(\"Son \"+fharenheit+\" F\");\n\n\n\n    \n\n    \n    \n    \n    \n    \n    \n    }\n    \n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Boletin2/Boletin_extra_2_2.java b/../Boletin2/Boletin_extra_2_2.java
+--- a/../Boletin2/Boletin_extra_2_2.java	(revision 91917e7b78e03d0b3ddfef9982a8bd9515e90fc4)
++++ b/../Boletin2/Boletin_extra_2_2.java	(date 1729236759202)
+@@ -1,25 +1,26 @@
+-/*
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+- */
++
+ package com.danielcastelao.newproyect.Proyectos.Prog;
+ 
+ import java.util.Scanner;
+ 
+ /**
+- *
+- * @author dam
++ * Paso de grados a Kenvin y paso de grados a Fharenheit
++ * @version 1.1
++ * @author Dima Aparicio
+  */
+ public class Boletin_extra_2_2 {
+     public static void main(String[] args){
+     Scanner sc=new Scanner(System.in);
++    /*crear variable grados*/
+     double grados;
+     System.out.println("A cuantos grados estamos?: ");
+     grados=sc.nextDouble();
+     System.out.println("Cuanto es en Kelvin?");
++    /*Salida de primera operacion double Kelvin a partir del dato grado*/
+     double kelvin=(grados+273.15);
+         System.out.println("Son: "+kelvin+" K");
+         System.out.println("Y en Fharenheit? ");
++        /*Salida de segunda operacion doubole Fharenheit a partir de los dos datos anteriores*/
+     double fharenheit=(grados*(9/5)+32);
+         System.out.println("Son "+fharenheit+" F");
+ 
+Index: ../Boletin2/Boletin_extra_2_4.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license\n * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template\n */\npackage com.danielcastelao.newproyect.Proyectos.Prog;\n\nimport java.util.Scanner;\n\n/**\n *\n * @author dam\n */\npublic class Boletin_extra_2_4 {\n    public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int dinero;\n    System.out.println(\"Cuanto es el dinero que necesitas: \");\n    dinero=sc.nextInt();\n    int n1=dinero/100;\n    int dinero1=dinero-(n1*100);\n    int n2=dinero1/20;\n    int dinero2=dinero1-(n2*20);\n    int n3=dinero2/5;\n    int dinero3=dinero2-(n3*5);\n    int m=dinero3/1;\n    System.out.println(\"Necesitamos \"+n1+\" billetes de 100€ \"+\" , \"+n2+\" billetes de 20€\"+\" , \"+n3+\" billetes de 5€ \"+\" , \"+m+\" monedas de 1€\");\n    \n    \n    \n    \n    \n    \n    \n    }\n    \n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Boletin2/Boletin_extra_2_4.java b/../Boletin2/Boletin_extra_2_4.java
+--- a/../Boletin2/Boletin_extra_2_4.java	(revision 91917e7b78e03d0b3ddfef9982a8bd9515e90fc4)
++++ b/../Boletin2/Boletin_extra_2_4.java	(date 1729237013257)
+@@ -1,21 +1,21 @@
+-/*
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+- */
++
+ package com.danielcastelao.newproyect.Proyectos.Prog;
+ 
+ import java.util.Scanner;
+ 
+ /**
+- *
+- * @author dam
++ * A partir de una cantidad puesta en consola, desglosar en billetes y euros el valor escrito
++ * @version 1.1
++ * @author Dima Aparicio
+  */
+ public class Boletin_extra_2_4 {
+     public static void main(String[] args){
+     Scanner sc=new Scanner(System.in);
+     int dinero;
++    /*Variable int dinero a desglosar*/
+     System.out.println("Cuanto es el dinero que necesitas: ");
+     dinero=sc.nextInt();
++    /*Valor de los distintos tipos de cambios necesarios conseguidos con operaciones*/
+     int n1=dinero/100;
+     int dinero1=dinero-(n1*100);
+     int n2=dinero1/20;
+@@ -23,13 +23,14 @@
+     int n3=dinero2/5;
+     int dinero3=dinero2-(n3*5);
+     int m=dinero3/1;
++    /*Salida de operaciones anteriores*/
+     System.out.println("Necesitamos "+n1+" billetes de 100€ "+" , "+n2+" billetes de 20€"+" , "+n3+" billetes de 5€ "+" , "+m+" monedas de 1€");
+     
+     
+     
+     
+     
+-    
++    sc.close();
+     
+     }
+     
+Index: ../Boletin2/Boletin_extra_2_3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license\n * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template\n */\npackage com.danielcastelao.newproyect.Proyectos.Prog;\n\nimport java.util.Scanner;\n\n/**\n *\n * @author dam\n */\npublic class Boletin_extra_2_3 {\n    public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int b1;\n    int b2;\n    int b3;\n    int m;\n    System.out.println(\"Cuantos Billetes de 100€ quieres:\");\n    b1=sc.nextInt();\n     System.out.println(\"Cuantos Billetes de 20€ quieres:\");\n    b2=sc.nextInt();\n     System.out.println(\"Cuantos Billetes de 5€ quieres:\");\n    b3=sc.nextInt();\n    System.out.println(\"Cuantos monedas de 1€ quieres:\");\n    m=sc.nextInt();\n    int total=b1*100+b2*20+b3*5+m*1;\n    System.out.println(\"Entonces tu cambio tatal es: \"+total);\n    \n    \n    \n    \n    \n    }\n    \n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Boletin2/Boletin_extra_2_3.java b/../Boletin2/Boletin_extra_2_3.java
+--- a/../Boletin2/Boletin_extra_2_3.java	(revision 91917e7b78e03d0b3ddfef9982a8bd9515e90fc4)
++++ b/../Boletin2/Boletin_extra_2_3.java	(date 1729236758890)
+@@ -1,22 +1,22 @@
+-/*
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+- */
++
+ package com.danielcastelao.newproyect.Proyectos.Prog;
+ 
+ import java.util.Scanner;
+ 
+ /**
+- *
+- * @author dam
++ * A partir de la cantidad de cambio que quieres crear operacion en conjunto con suma del total escrito
++ * @version 1.1
++ * @author Dima Aparicio
+  */
+ public class Boletin_extra_2_3 {
+     public static void main(String[] args){
+     Scanner sc=new Scanner(System.in);
++    /*Variables int de cada cambio pedido*/
+     int b1;
+     int b2;
+     int b3;
+     int m;
++    /*Salida de datos de cada variable escritos por consola con valor Int*/
+     System.out.println("Cuantos Billetes de 100€ quieres:");
+     b1=sc.nextInt();
+      System.out.println("Cuantos Billetes de 20€ quieres:");
+@@ -25,12 +25,14 @@
+     b3=sc.nextInt();
+     System.out.println("Cuantos monedas de 1€ quieres:");
+     m=sc.nextInt();
++    /*Operacion total pedida*/
+     int total=b1*100+b2*20+b3*5+m*1;
++    /*Salida operacion*/
+     System.out.println("Entonces tu cambio tatal es: "+total);
+     
+     
+     
+-    
++    sc.close();
+     
+     }
+     
+Index: ../Boletin2/Boletin2_5.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license\n * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template\n */\npackage com.danielcastelao.newproyect.Proyectos.Prog;\nimport java.util.Scanner;\n/**\n *\n * @author dam\n */\npublic class Boletin2_5 {\n    public static void main(String[] args){\n    Scanner s= new Scanner(System.in);\n    System.out.println(\"Dime en que milla te encuentras?:\");\n    long milla;\n    milla=s.nextLong();\n    double metro=(milla*1.852);\n    System.out.println(\"Entonces son \"+ metro +\" kilometros\");\n s.close();\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Boletin2/Boletin2_5.java b/../Boletin2/Boletin2_5.java
+--- a/../Boletin2/Boletin2_5.java	(revision 91917e7b78e03d0b3ddfef9982a8bd9515e90fc4)
++++ b/../Boletin2/Boletin2_5.java	(date 1729236758678)
+@@ -1,20 +1,22 @@
+-/*
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+- */
++
+ package com.danielcastelao.newproyect.Proyectos.Prog;
+ import java.util.Scanner;
+ /**
+- *
+- * @author dam
++ * Cambio de millas a metros
++ * @version 1.1
++ * @author Dima Aparicio
+  */
+ public class Boletin2_5 {
+     public static void main(String[] args){
++        /*Importar escaner*/
+     Scanner s= new Scanner(System.in);
++    /*Preguntar variable milla long*/
+     System.out.println("Dime en que milla te encuentras?:");
+     long milla;
+     milla=s.nextLong();
++    /*crear operacion double a partir de la anterior variable*/
+     double metro=(milla*1.852);
++    /*Salida de operacion*/
+     System.out.println("Entonces son "+ metro +" kilometros");
+  s.close();
+     }
+Index: ../Boletin2/Boletin_extra_2_1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license\n * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template\n */\npackage com.danielcastelao.newproyect.Proyectos.Prog;\nimport java.util.Scanner;\n/**\n *\n * @author dam\n */\npublic class Boletin_extra_2_1 {\n    public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    double producto;\n    double precio;\n    double oferta;\n    System.out.println(\"Cuanto cuesta el producto:\");\n    producto=sc.nextDouble();\n    System.out.println(\"Cuanto es el precio del producto con descuento?: \");\n    precio=sc.nextDouble();\n    System.out.println(\"Cual es el porcentaje del descuento? \");\n    oferta=(precio/producto)*100;\n    System.out.println(\"La oferta es de \"+ oferta + \"  %\");\n    \n    \n    \n    \n    \n    \n    }\n    \n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Boletin2/Boletin_extra_2_1.java b/../Boletin2/Boletin_extra_2_1.java
+--- a/../Boletin2/Boletin_extra_2_1.java	(revision 91917e7b78e03d0b3ddfef9982a8bd9515e90fc4)
++++ b/../Boletin2/Boletin_extra_2_1.java	(date 1729236758990)
+@@ -1,16 +1,15 @@
+-/*
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+- */
++
+ package com.danielcastelao.newproyect.Proyectos.Prog;
+ import java.util.Scanner;
+ /**
+- *
+- * @author dam
++ * Decir el descuento del producto a partir del precio y el pago
++ * @version 1.1
++ * @author Dima Aparicio
+  */
+ public class Boletin_extra_2_1 {
+     public static void main(String[] args){
+     Scanner sc=new Scanner(System.in);
++    /*Variables doubles a los elementos de la oferta*/
+     double producto;
+     double precio;
+     double oferta;
+@@ -19,13 +18,15 @@
+     System.out.println("Cuanto es el precio del producto con descuento?: ");
+     precio=sc.nextDouble();
+     System.out.println("Cual es el porcentaje del descuento? ");
++    /*Operacion a partir de datos escritos por consola de las anteriores variables*/
+     oferta=(precio/producto)*100;
++    /*Salida de la operacion*/
+     System.out.println("La oferta es de "+ oferta + "  %");
+     
+     
+     
+     
+-    
++    sc.close();
+     
+     }
+     
+Index: ../Boletin2/Boletin2_4.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license\n * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template\n */\npackage com.danielcastelao.newproyect.Proyectos.Prog;\nimport java.util.Scanner;\n/**\n *\n * @author dam\n */\npublic class Boletin2_4 {\n    public static void main(String[] args){\n    Scanner s=new Scanner(System.in);\n    System.out.println(\"Dame tu primera variable: \");\n    double a;\n    a=s.nextLong();\n    System.out.println(\"Dame tu siguiente variable:\");\n    double b;\n    b=s.nextLong();\n    System.out.println(\"La sume de estos es:\"+(a+b));\n    System.out.println(\"La resta de los dos es:\"+(a-b));\n    System.out.println(\"El producto entre ellos es: \"+a*b);\n    System.out.println(\"Su cociente es:\"+a%b);\n s.close();\n    }   \n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Boletin2/Boletin2_4.java b/../Boletin2/Boletin2_4.java
+--- a/../Boletin2/Boletin2_4.java	(revision 91917e7b78e03d0b3ddfef9982a8bd9515e90fc4)
++++ b/../Boletin2/Boletin2_4.java	(date 1729236759038)
+@@ -1,22 +1,23 @@
+-/*
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+- */
++
+ package com.danielcastelao.newproyect.Proyectos.Prog;
+ import java.util.Scanner;
+ /**
+- *
+- * @author dam
++ * Realizar operaciones entre dos variables que fueron escritas en consola
++ * @version 1.1
++ * @author Dima Aparicio
+  */
+ public class Boletin2_4 {
+     public static void main(String[] args){
+     Scanner s=new Scanner(System.in);
++    /*Definir primera variable double*/
+     System.out.println("Dame tu primera variable: ");
+     double a;
+     a=s.nextLong();
++    /*Definir segunda variable double*/
+     System.out.println("Dame tu siguiente variable:");
+     double b;
+     b=s.nextLong();
++    /*Saida de datos con todas la operaciones que nos piden*/
+     System.out.println("La sume de estos es:"+(a+b));
+     System.out.println("La resta de los dos es:"+(a-b));
+     System.out.println("El producto entre ellos es: "+a*b);
+Index: ../Boletin2/Boletin2_1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license\n * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template\n */\npackage com.danielcastelao.newproyect.Proyectos.Prog;\n\n/**\n *\n * @author dam\n */\npublic class Boletin2_1 {\n    public static void main(String[] args){\n        int b=4;\n        int a=3;\n        int area=(b*a)/2;\n        System.out.println(\"El area de tu triángulo es: \"+area);   \n        }\n    \n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Boletin2/Boletin2_1.java b/../Boletin2/Boletin2_1.java
+--- a/../Boletin2/Boletin2_1.java	(revision 91917e7b78e03d0b3ddfef9982a8bd9515e90fc4)
++++ b/../Boletin2/Boletin2_1.java	(date 1729236759142)
+@@ -1,18 +1,18 @@
+-/*
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+- */
++
+ package com.danielcastelao.newproyect.Proyectos.Prog;
+ 
+-/**
+- *
+- * @author dam
++/**Calcular el triángulo de base y altura conocidas
++ * @version 1.1
++ * @author Dima Aparicio
+  */
+ public class Boletin2_1 {
+     public static void main(String[] args){
++        /*Dar valor Int a base y altura*/
+         int b=4;
+         int a=3;
++        /*Operacion area Int*/
+         int area=(b*a)/2;
++        /*Salida de resultado*/
+         System.out.println("El area de tu triángulo es: "+area);   
+         }
+     
+Index: ../Boletin2/Boletin_extra_2_5.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license\n * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template\n */\npackage com.danielcastelao.newproyect.Proyectos.Prog;\nimport java.util.Scanner;\n/**\n *\n * @author dam\n */\npublic class Boletin_extra_2_5 {\n    public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    float fijo;\n    float ventas;\n    float distancia;\n    float hora;\n    \n\n\n    System.out.println(\"Cuanto es tu sueldo fijo?\");\n    fijo=sc.nextFloat();\n    System.out.println(\"Cuanto ganaste con las ventas?\");\n    ventas=sc.nextFloat();\n    System.out.println(\"A que distancia estas del trabajo?\");\n    distancia=sc.nextFloat();\n    System.out.println(\"Cuanto tardas en venir al trabajo?\");\n    hora=sc.nextFloat();\n    double soldo_bruto=fijo+ventas*0.05+2*distancia+hora*30;\n    System.out.println(\"Tu sueldo bruto es \"+ soldo_bruto+\" €\");\n    double irpf=0.18*soldo_bruto;\n    float ssocial=36;\n    System.out.println(\"Tu sueldo liquido es \"+(soldo_bruto-(irpf+ssocial))+\" €\");\n    \n    \n    \n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Boletin2/Boletin_extra_2_5.java b/../Boletin2/Boletin_extra_2_5.java
+--- a/../Boletin2/Boletin_extra_2_5.java	(revision 91917e7b78e03d0b3ddfef9982a8bd9515e90fc4)
++++ b/../Boletin2/Boletin_extra_2_5.java	(date 1729236758846)
+@@ -1,23 +1,22 @@
+-/*
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+- */
+-package com.danielcastelao.newproyect.Proyectos.Prog;
++
+ import java.util.Scanner;
+-/**
+- *
+- * @author dam
++
++
++/**Calculo del sueldo fijo y liquido leyendo lo escrito por máquina
++ * @version 1.1
++ * @author Dima Aparicio
+  */
+ public class Boletin_extra_2_5 {
+     public static void main(String[] args){
+     Scanner sc=new Scanner(System.in);
++    /*Valor de variables fijas */
+     float fijo;
+     float ventas;
+     float distancia;
+     float hora;
+     
+ 
+-
++/* Preguntas de valor Int para corresponder un valor a la respuesta*/
+     System.out.println("Cuanto es tu sueldo fijo?");
+     fijo=sc.nextFloat();
+     System.out.println("Cuanto ganaste con las ventas?");
+@@ -26,10 +25,12 @@
+     distancia=sc.nextFloat();
+     System.out.println("Cuanto tardas en venir al trabajo?");
+     hora=sc.nextFloat();
++    /*Primera operacion para crear el sueldo bruto*/
+     double soldo_bruto=fijo+ventas*0.05+2*distancia+hora*30;
+     System.out.println("Tu sueldo bruto es "+ soldo_bruto+" €");
+     double irpf=0.18*soldo_bruto;
+     float ssocial=36;
++    /*Segunda operacion para el calculo de sueldo liquido*/
+     System.out.println("Tu sueldo liquido es "+(soldo_bruto-(irpf+ssocial))+" €");
+     
+     

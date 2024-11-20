@@ -6,14 +6,21 @@ public class Examen_PRG {
         int n;
         double resto;
         double raiz;
-        System.out.println("De que numero natural quieres hacer su raiz?: ");
-        n=sc.nextInt();
-        raiz = Math.sqrt(n);
-        resto= raiz%2;
-        if (resto==0) {
-            System.out.println("Resultado "+(int)raiz);
-        }else {
-            System.out.println("Resultado "+(int)raiz+" con resto "+((Math.incrementExact((int) raiz))));
-        }
+        do {
+            System.out.println("De que numero natural quieres hacer su raiz?: ");
+            n = Integer.parseInt(sc.nextLine());
+            if (n!= 0){
+                raiz = Math.sqrt(n);
+                resto = raiz % 2;
+                if (resto == 0) {
+                    System.out.println("Resultado " + (int) raiz);
+                } else {
+                    System.out.println("Resultado " + (int) raiz + " con resto " + ((Math.incrementExact((int) raiz))));
+                }
+            } else {
+                System.out.println("No se ha introducido un numero racional.");
+                return;
+            }
+        }while (true);
     }
 }

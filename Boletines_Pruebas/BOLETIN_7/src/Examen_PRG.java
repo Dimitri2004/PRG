@@ -8,7 +8,7 @@ public class Examen_PRG {
         double raiz;
         do {
             System.out.println("De que numero natural quieres hacer su raiz?: ");
-            n = Integer.parseInt(sc.nextLine());
+            n = sc.nextInt();
             if (n!= 0){
                 raiz = Math.sqrt(n);
                 resto = raiz % 2;

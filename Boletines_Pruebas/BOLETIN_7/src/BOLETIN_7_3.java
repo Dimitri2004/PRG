@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 /**Crear comentrarios para cada linea**/
 
@@ -43,14 +45,39 @@ public class BOLETIN_7_3 {
         }
 
         // Condicionar los alumnos y ordenarlos por nombre
+        List<String> todosAlumnos = new ArrayList<>();
+        List<String> alumnosAprobados = new ArrayList<>();
+        List<String> alumnosNotaMaxima = new ArrayList<>();
+
         for (int i = 0; i < nota.length; i++) {
-            if (nota[i] >0) {
-                System.out.println("Alumno " + alum[i] + " aprobo con " + nota[i]);
+            String infoAlumno = "Alumno " + alum[i] + " sacó un " + nota[i];
+            todosAlumnos.add(infoAlumno);
+
+            if (nota[i] >= 5) {
+                alumnosAprobados.add("Alumno " + alum[i] + " aprobó con " + nota[i]);
             }
+
             if (nota[i] == 10) {
-                System.out.println("Alumno " + alum[i] + " obtuvo la maxima nota " + nota[i]);
+                alumnosNotaMaxima.add("Alumno " + alum[i] + " obtuvo la máxima nota " + nota[i]);
             }
         }
+
+// Imprimir resultados
+        System.out.println("Todos los alumnos:");
+        for (String alumno : todosAlumnos) {
+            System.out.println(alumno);
+        }
+
+        System.out.println("\nAlumnos aprobados:");
+        for (String alumno : alumnosAprobados) {
+            System.out.println(alumno);
+        }
+
+        System.out.println("\nAlumnos con nota máxima:");
+        for (String alumno : alumnosNotaMaxima) {
+            System.out.println(alumno);
+        }
+
         return nota;
     }
     // Buscar la nota del alumno por nombre

@@ -42,9 +42,9 @@ public class BOLETIN_7_3 {
             nota[nota.length - 1 - i] = temp;
         }
 
-        // Condicionar los alumnos que aprobaron y obtuvieron la maxima nota
+        // Condicionar los alumnos y ordenarlos por nombre
         for (int i = 0; i < nota.length; i++) {
-            if (nota[i] >= 5) {
+            if (nota[i] >0) {
                 System.out.println("Alumno " + alum[i] + " aprobo con " + nota[i]);
             }
             if (nota[i] == 10) {

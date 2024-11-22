@@ -20,7 +20,7 @@ public class BOLETIN_7_4 {
                 "B", "N", "J", "Z ", "S ", "Q", "V", " H ", "L ", "C ", "K", "E"};
         for (int i = 0; i < 1; i++) {//Entramos dentro del array generando una unica salida de letra
             if (num.length != 8) {
-                System.out.println("Al "+dni+" le corresonde la "+letra[(res)]);
+                System.out.println("Al "+dni+" le corresonde la "+letra[(res)]);//Saca el dni con su numero 
             } else {
                 System.out.println("Error: El número de DNI introducido no es válido");
                 alumno_dni();

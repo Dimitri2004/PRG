@@ -22,7 +22,7 @@ public class BOLETIN_7_4 {
             if (num.length != 8) {
                 System.out.println("Al "+dni+" le corresonde la "+letra[(res)]);//Saca el dni con su numero 
             } else {
-                System.out.println("Error: El número de DNI introducido no es válido");
+                System.out.println("Error: El número de DNI introducido no es válido");//Salida de la condicion en caso de no cumplir con la primera
                 alumno_dni();
             }
             sc.close();

@@ -15,7 +15,5 @@ public class BOLETIN_7_1 {
             for(j = num.length - 1; j > 0; --j) {
                 System.out.println(num[j]);/**lee los numeros generados del anterior del reves**/
             }
-
         }
-
 }

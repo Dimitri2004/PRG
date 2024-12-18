@@ -51,25 +51,28 @@ public class Boletin_7_2_1 {
 
             default:
                 System.out.println("Opcion incorrecta");
+                opciones(tabla);
+                break;
         }
     }
 
     public static void cambiarAsignatura(String[][] tabla){
         Scanner sc = new Scanner(System.in);
-            String n,p,s;
+            String n,p;
 
-            for(int i = 0; i <6; i++) {
-                    System.out.print("\n"+"Dame las asignaturas que quieres cambiar: 1.Mates 2.Historia  3.Deportes 4.Cocina 5.Piscina   ");
+            for(int i = 0; i < tabla.length; i++) {
+                    System.out.print("\n"+"Dime la asignatura que quieres cambiar:  ");
                     n=sc.next();
-                    switch (n){
+                    switch (n) {
                         case "Mates", "Historia", "Cocina", "Deporte", "Piscina":
                             System.out.println("Cual quieres aqui?:");
-                            tabla[i][0]=sc.next();
-                            break;
+                            tabla[i][0] = sc.next();
+
+                        System.out.println("Asignatura cambiada correctamente");
+                        opciones(tabla);
+                        break;
                     }
-                    System.out.println("Asignatura cambiada correctamente");
-                    opciones(tabla);
-                }
+
                 if(tabla[i][0].equals(" ")){
                     System.out.print("\n"+"Dame una asignatura para añadir: ");
                     n=sc.next();

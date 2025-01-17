@@ -19,6 +19,7 @@ public class Cruz_Raya {
     }
 
     static void imprimirTablero(String[][] tablero) {
+        //Creamos el tablero
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 System.out.print(tablero[i][j] + " ");

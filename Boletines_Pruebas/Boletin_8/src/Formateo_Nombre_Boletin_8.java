@@ -2,10 +2,11 @@ import java.util.Scanner;
 
 public class Formateo_Nombre_Boletin_8 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        
+        Scanner sc=new Scanner(System.in);//Scanner de lectura para lo q escriba en la terminal el usuario
         System.out.println("Dime tu nombre completo");
-        String nombre=sc.nextLine(); //string nombre que utilizaremos 
-        String[] nombre_completo=nombre.split(" "); //string de nombre dividido en array
+        String nombre=sc.nextLine(); //String nombre que utilizaremos 
+        String[] nombre_completo=nombre.split(" "); //String de nombre dividido en array
 
         nuevonombre(nombre_completo);
 
@@ -21,13 +22,14 @@ public class Formateo_Nombre_Boletin_8 {
             case 1:
                 //crear nombre en mayusculas
                 for(int i=0;i<nombre.length;i++){
-                    String nombre_cambiado=nombre[i].toUpperCase();
+                    String nombre_cambiado=nombre[i].toUpperCase();//Funcion que cambia las palabras a mayuscula
                     System.out.print(nombre_cambiado + " " );
                 }
                 break;
             case 2:
                 //string nombre sin cambios
                 System.out.println("Nombre sin cambiar");
+                //Bucle for para entrar y recorrer
                 for(int i=0;i<nombre.length;i++) {
                     System.out.print(nombre[i] + " ");
                 }

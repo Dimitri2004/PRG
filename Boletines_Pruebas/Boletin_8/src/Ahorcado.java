@@ -13,6 +13,7 @@ public class Ahorcado {
         boolean acierto = false;
         int jugadorActual = 0;
         while (!gano &&!perdio && intentos > 0) {
+            //condicion de victoria
             System.out.println("Turno del jugador " + (jugadorActual + 1));
             System.out.println("Letras jugadas: " + Arrays.toString(letrasJugadas));
             System.out.print("Ingrese una letra: ");
@@ -46,6 +47,7 @@ public class Ahorcado {
     }
     //Representar el muñequo correspondinete en caso de fallos
     public static void muñeco(int intentos) {
+        //clase para crear el muñeco en caso de fallo
         switch (intentos) {
             case 6:
                 System.out.println("  -----");
@@ -108,7 +110,9 @@ public class Ahorcado {
     }
     //funcion que alague o acorte la palabrasecreta
     public static void acerto(char letra, char[] palabraSecreta, char[] letrasJugadas) {
+        //        
         for (int i = 0; i < palabraSecreta.length; i++) {
+            //bucle que cambia las longitudes
             if (palabraSecreta[i] == letra) {
                 letrasJugadas[i] = letra;
             }

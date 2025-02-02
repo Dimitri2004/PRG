@@ -22,7 +22,7 @@ public class Contraseña {
             restricciones += "La contraseña debe tener al menos 8 caracteres.\n";
         }
         for(int i = 0; i < password.length(); i++){
-            //
+            //creamos charcter para la serie de Strings
             char c=password.charAt(i);
             if(Character.isUpperCase(c)){
                 restricciones += "La contraseña debe tener al menos una mayúscula.\n";

@@ -20,6 +20,7 @@ public class Ahorcado {
             char letraJugada = sc.next().charAt(0);
 
             acierto = false;
+            //Contador de letras empleadas
             for (int i = 0; i < palabraSecreta.length; i++) {
                 if (palabraSecreta[i] == letraJugada) {
                     letrasJugadas[i] = letraJugada;
@@ -28,10 +29,12 @@ public class Ahorcado {
 
             }
             if (!acierto) {
+                //nº intentos 
                 intentos--;
             }
             gano = Arrays.equals(letrasJugadas, palabraSecreta);
             perdio = intentos == 0;
+            
             jugadorActual = (jugadorActual + 1) % 2;
             muñeco(intentos);
         }
@@ -114,9 +117,11 @@ public class Ahorcado {
         for (int i = 0; i < palabraSecreta.length; i++) {
             //bucle que cambia las longitudes
             if (palabraSecreta[i] == letra) {
+                //Corresponderle al array de strings a cada letra de la plabara
                 letrasJugadas[i] = letra;
             }
         }
+        //Salida del array
         System.out.println("Letras jugadas: " + Arrays.toString(letrasJugadas));
 
     }

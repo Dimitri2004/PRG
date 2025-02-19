@@ -13,12 +13,14 @@ public class Ahorcado {
         boolean acierto = false;
         int jugadorActual = 0;
         while (!gano &&!perdio && intentos > 0) {
+            //condicion de victoria
             System.out.println("Turno del jugador " + (jugadorActual + 1));
             System.out.println("Letras jugadas: " + Arrays.toString(letrasJugadas));
             System.out.print("Ingrese una letra: ");
             char letraJugada = sc.next().charAt(0);
 
             acierto = false;
+            //Contador de letras empleadas
             for (int i = 0; i < palabraSecreta.length; i++) {
                 if (palabraSecreta[i] == letraJugada) {
                     letrasJugadas[i] = letraJugada;
@@ -27,10 +29,12 @@ public class Ahorcado {
 
             }
             if (!acierto) {
+                //nº intentos 
                 intentos--;
             }
             gano = Arrays.equals(letrasJugadas, palabraSecreta);
             perdio = intentos == 0;
+            
             jugadorActual = (jugadorActual + 1) % 2;
             muñeco(intentos);
         }
@@ -46,6 +50,7 @@ public class Ahorcado {
     }
     //Representar el muñequo correspondinete en caso de fallos
     public static void muñeco(int intentos) {
+        //clase para crear el muñeco en caso de fallo
         switch (intentos) {
             case 6:
                 System.out.println("  -----");
@@ -108,11 +113,15 @@ public class Ahorcado {
     }
     //funcion que alague o acorte la palabrasecreta
     public static void acerto(char letra, char[] palabraSecreta, char[] letrasJugadas) {
+        //        
         for (int i = 0; i < palabraSecreta.length; i++) {
+            //bucle que cambia las longitudes
             if (palabraSecreta[i] == letra) {
+                //Corresponderle al array de strings a cada letra de la plabara
                 letrasJugadas[i] = letra;
             }
         }
+        //Salida del array
         System.out.println("Letras jugadas: " + Arrays.toString(letrasJugadas));
 
     }

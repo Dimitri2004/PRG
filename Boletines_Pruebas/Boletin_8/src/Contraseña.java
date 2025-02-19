@@ -16,11 +16,13 @@ public class Contraseña {
 
     }
     static String restricciones(String password) {
+        //salida de datos string para el main
         String restricciones = "";
         if (password.length() < 8) {
             restricciones += "La contraseña debe tener al menos 8 caracteres.\n";
         }
         for(int i = 0; i < password.length(); i++){
+            //creamos charcter para la serie de Strings
             char c=password.charAt(i);
             if(Character.isUpperCase(c)){
                 restricciones += "La contraseña debe tener al menos una mayúscula.\n";

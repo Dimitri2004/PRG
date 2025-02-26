@@ -1,15 +1,3 @@
-/*
--Construcotr con taboa con 0 elementos
--obter numero de elementos
--insertar numero o final da lista
--insertar numero o principio da lista
--insertar numero en lugar da lista  especificado por un indice
--obter un elemento especificado por un indice
-buscar un numero na lista devoltando o indice do primeiro luganr onde se encontre
--devvoltara -1 si non o encontra
--mostra elementos da lista por consola
- */
-
 import java.util.Arrays;
 
 public class Lista {

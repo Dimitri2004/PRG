@@ -1,5 +1,3 @@
-import java.util.Locale;
-
 public class Hora {
     enum FormatoHora{DOCE,VENTICUATRO};
     private FormatoHora formato;

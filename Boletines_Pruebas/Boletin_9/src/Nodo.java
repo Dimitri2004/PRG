@@ -1,5 +1,3 @@
-
-
 public class Nodo {
     private int valor;
     private Nodo punteiroSeguinte;

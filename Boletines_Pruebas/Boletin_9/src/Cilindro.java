@@ -6,6 +6,7 @@ public class Cilindro extends Solido{
         setRadio(r);
         setAltura(h);
     }
+    //Damos parametros a nuestra figura implementada
     public Cilindro(double r, double h, double x, double y){
         super(x, y);
         setRadio(r);

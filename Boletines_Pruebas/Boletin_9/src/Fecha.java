@@ -8,10 +8,13 @@ public class Fecha {
         this.mes = mes;
         this.año = año;
     }
-
+    //Seters y Geters de nuestros privates para su futura compilacion
+ //Setdia hace que el dia que nosotros implementemos sustituya al del que teniamos antes
+    
     public void setDia(int dia) {
         this.dia = dia;
     }
+    
 
     public void setMes(int mes) {
         this.mes = mes;
@@ -36,6 +39,7 @@ public class Fecha {
     public String getFecha() {
         return dia + "/" + mes + "/" + año;
     }
+    //getdiasMes
 
     public int getDiasEnMes(int mes) {
         return switch (mes) {

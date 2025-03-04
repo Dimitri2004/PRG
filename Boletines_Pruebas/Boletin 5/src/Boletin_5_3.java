@@ -33,6 +33,7 @@ public class Boletin_5_3 {
                         lado = sc.nextInt();
                     } else {}
                 int area=base*lado;/*Sacamos por consola la respectiva operracion al area*/
+                
                 System.out.println("El area es  " + area);
           } while (lado <= 0);/*Repetir proceso hasta q el area sea positiva*/
     }

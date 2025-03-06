@@ -1,2 +1,4 @@
-public class Vivenda {
+public class Vivenda extends Inmuebles{
+    private int numeroHabitacions;
+
 }

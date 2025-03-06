@@ -1,66 +1,64 @@
-public class Inmuebles {
-    private boolean tipoCompra;
-    private int numeroPlazas;
-    private float prezo;
-    private String direccion;
+public abstract class Inmuebles {
+    private boolean aVenta;
+    private String localidade;
+    private int prezo;
+    private String rua;
     private int numero;
-    private int dimensions;
+    public Inmuebles(boolean aVenta, String localidade, int prezo, String rua, int numero) {
+        //colocarlos de forma que tengamos que poner condiciones que no admitan
 
-    public Inmuebles(boolean tipoCompra, int numeroPlazas, float prezo, String direccion, int numero, int dimensions) {
-        setTipoCompra (tipoCompra);
-        setNumeroPlazas(numeroPlazas);
+        this.aVenta = aVenta;
+        this.localidade = localidade;
         setPrezo(prezo);
-        setDireccion(direccion);
-        setNumero(numero);
-        setDimensions(dimensions);
+        this.rua = rua;
+        this.numero = numero;
     }
-
-    public boolean isTipoCompra() {
-        return tipoCompra;
-    }
-
-    public void setTipoCompra(boolean tipoCompra) {
-        this.tipoCompra = tipoCompra;
-    }
-
-    public int getNumeroPlazas() {
-        return numeroPlazas;
-    }
-
-    public void setNumeroPlazas(int numeroPlazas) {
-        this.numeroPlazas = numeroPlazas;
-    }
-
-    public float getPrezo() {
+    public int getPrezo() {
         return prezo;
     }
 
-    public void setPrezo(float prezo) {
-        this.prezo = prezo;
-    }
+    public void setPrezo(int prezo) {
+        if (prezo < 0) {
+            System.out.println("El precio no puede ser negativo");
 
-    public String getDireccion() {
-        return direccion;
+        } else {
+            this.prezo = prezo;
+        }
     }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public boolean isaVenta() {
+        return aVenta;
     }
-
+    public void setaVenta(boolean aVenta) {
+        this.aVenta = aVenta;
+    }
+    public String getLocalidade() {
+        return localidade;
+    }
+    public void setLocalidade(String localidade) {
+        this.localidade = localidade;
+    }
+    public String getRua() {
+        return rua;
+    }
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
     public int getNumero() {
         return numero;
     }
-
     public void setNumero(int numero) {
-        this.numero = numero;
+        //queremos su absoluto
+       this.numero = Math.abs(numero);
     }
 
-    public int getDimensions() {
-        return dimensions;
+    public String toString() {
+        String mensaxe="Inmuebles [aVenta=" + aVenta + ", localidade=" + localidade + ", numero=" + numero + ", prezo=" + prezo
+                + ", rua=" + rua + "]";
+       String estado;
+        if(aVenta)estado="En alquiler";
+        else estado="En venta";
+        return mensaxe;
     }
 
-
-    public void setDimensions(int dimensions) {
-        this.dimensions = dimensions;
-    }
+    public abstract double calcularGanancia();
 }

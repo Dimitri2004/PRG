@@ -6,6 +6,7 @@ public class Cilindro extends Solido{
         setRadio(r);
         setAltura(h);
     }
+    //Damos parametros a nuestra figura implementada
     public Cilindro(double r, double h, double x, double y){
         super(x, y);
         setRadio(r);
@@ -30,6 +31,7 @@ public class Cilindro extends Solido{
     public double calcularVolumen(){
         return Math.PI*Math.pow(radio,2)*altura;
     }
+    //Cadena de ejecucion de la figura sacando radio altura y sus puntos heredados desde atrás
 
     public String aCadea(){
         return "El cilindro de radio " + radio + " y altura " + altura + "x= "+ getX() +" y= "+ getY() ;

@@ -52,7 +52,7 @@ public abstract class Inmuebles {
     }
 
     public String toString() {
-        String mensaxe="Inmuebles [aVenta=" + aVenta + ", localidade=" + localidade + ", numero=" + numero + ", prezo=" + prezo
+        String mensaxe="Inmuebles  aVenta=" + aVenta + ", localidade=" + localidade + ", numero=" + numero + ", prezo=" + prezo
                 + ", rua=" + rua + "]";
        String estado;
         if(aVenta)estado="En alquiler";

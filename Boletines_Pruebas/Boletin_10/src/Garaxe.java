@@ -35,6 +35,6 @@ public abstract class Garaxe extends Inmuebles {
     }
     public double calcularGanancia() {
         if (isaVenta()) return getPrezo();
-        else return getPrezo() * 0.02;
+        else return getPrezo() * 0.03;
     }
 }

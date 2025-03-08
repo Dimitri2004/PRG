@@ -30,9 +30,11 @@ public abstract class Garaxe extends Inmuebles {
     public int getNumeroP() {
         return numeroP;
     }
+    //setter del numero de la plaza del parking
     public void setNumeroP(int numeroP) {
         this.numeroP =Math.abs(numeroP);
     }
+    //salida de la variable
     public double calcularGanancia() {
         if (isaVenta()) return getPrezo();
         else return getPrezo() * 0.03;

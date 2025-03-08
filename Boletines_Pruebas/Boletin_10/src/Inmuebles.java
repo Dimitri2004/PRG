@@ -13,11 +13,14 @@ public abstract class Inmuebles {
         this.rua = rua;
         this.numero = numero;
     }
+    //Creamos los getters y setters correspondientes a cada una de las funciones
     public int getPrezo() {
         return prezo;
     }
 
+    
     public void setPrezo(int prezo) {
+        
         if (prezo < 0) {
             System.out.println("El precio no puede ser negativo");
 
@@ -37,6 +40,7 @@ public abstract class Inmuebles {
     public void setLocalidade(String localidade) {
         this.localidade = localidade;
     }
+    
     public String getRua() {
         return rua;
     }
@@ -50,8 +54,10 @@ public abstract class Inmuebles {
         //queremos su absoluto
        this.numero = Math.abs(numero);
     }
-
+    
+    //creamos la cadena que sacara los resultados de las variables que tiene la funcion "inmuebles" 
     public String toString() {
+                
         String mensaxe="Inmuebles  aVenta=" + aVenta + ", localidade=" + localidade + ", numero=" + numero + ", prezo=" + prezo
                 + ", rua=" + rua + "]";
        String estado;
@@ -59,6 +65,6 @@ public abstract class Inmuebles {
         else estado="En venta";
         return mensaxe;
     }
-
+    
     public abstract double calcularGanancia();
 }

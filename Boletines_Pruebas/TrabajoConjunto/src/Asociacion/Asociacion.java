@@ -1,3 +1,5 @@
+package Asociacion;
+
 import static com.sun.tools.sjavac.Util.set;
 
 public abstract class Asociacion {
@@ -24,6 +26,4 @@ public abstract class Asociacion {
         }
     }
     public abstract String toString();
-
-
 }

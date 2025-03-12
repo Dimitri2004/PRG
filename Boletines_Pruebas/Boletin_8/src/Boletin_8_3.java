@@ -30,7 +30,7 @@ public class Boletin_8_3 {
         
         for ( int i = 0; i < palabra.length(); i++) {
             
-            palabrasDividas[i] = palabra.substring(++1,i, Math.min(i*(n+1), palabra.length()));
+            palabrasDividas[i] = palabra.substring(++i, Math.min(i*(n+1), palabra.length()));
             
             i++;
         }

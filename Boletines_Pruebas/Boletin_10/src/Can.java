@@ -21,4 +21,8 @@ public class Can extends Mamifero implements Son{
     public void voz() {
         System.out.println("Ehiiiiaaaaa");
     }
+
+    public void ronroneo() {
+        System.out.println("Pew pew");
+    }
 }

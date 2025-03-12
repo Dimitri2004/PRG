@@ -1,10 +1,12 @@
 package Asociacion;
 
-public class Asalariados extends Traballadores implements GastosIngresos{
+import DataHora.Data;
+
+public class Asalariados extends Traballadores {
     private double soldo;
     private String cargo;
 
-    public Asalariados(String Nome, String Dni, int dataIngreso, double soldo, String cargo) {
+    public Asalariados(String Nome, String Dni, Data dataIngreso, double soldo, String cargo) {
         super(Nome, Dni, dataIngreso);
         setSoldo(soldo);
         setCargo(cargo);
@@ -21,12 +23,12 @@ public class Asalariados extends Traballadores implements GastosIngresos{
     public void setCargo(String cargo) {
         this.cargo = cargo;
     }
-    public double calcularGastosIngresos(){
-        return soldo;
-    }
-
     public String toString() {
-        return "Asociacion.Asalariados{" + "Nome=" + getNombre() + ", Dni=" + getDni() + ", DataIngreso=" + getDataIngreso() + ", Soldo=" + soldo + ", Cargo=" + cargo + '}';
+        String a= "Asalariados{" + "Nome=" + getNombre() + ", Dni=" + getLetraDni() + ", DataIngreso=" + getDataIngreso().toString()+ ", Soldo=" + soldo + ", Cargo=" + cargo + '}';
+        return super.toString() + a;
+    }
+    public double calcularGastosIngresos(){
+        return -soldo -soldo*15/100;
     }
 
 

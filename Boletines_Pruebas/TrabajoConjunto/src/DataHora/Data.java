@@ -4,7 +4,7 @@ public class Data {
     private int dia;
     private int mes;
     private int ano;
-    public Data() {
+    public Data(int dia, int mes, int ano) {
         setData(dia, mes, ano);
     }
     public int getDia() {
@@ -34,6 +34,6 @@ public class Data {
         setAno(ano);
     }
     public String toString() {
-        return "Data{" + "dia=" + dia + ", mes=" + mes + ", ano=" + ano + '}';
+        return "Data" + getData();
     }
 }

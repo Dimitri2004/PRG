@@ -1,12 +1,15 @@
 package Asociacion;
 
+import DataHora.Data;
+import DataHora.Hora;
+
 public class Voluntarios extends Traballadores implements GastosIngresos {
     private int edade;
-    private int horas;
+    private Hora horas;
     private String profesision;
     private String Trabajo;
 
-    public Voluntarios(String Nombre, String Dni, int dataIngreso, int edade, int horas, String profesision, String Trabajo) {
+    public Voluntarios(String Nombre, String Dni, Data dataIngreso, int edade, Hora horas, String profesision, String Trabajo) {
         super(Nombre, Dni, dataIngreso);
         setEdade(edade);
         setHoras(horas);
@@ -19,11 +22,11 @@ public class Voluntarios extends Traballadores implements GastosIngresos {
     public void setEdade(int edade) {
         this.edade = Math.abs(edade);
     }
-    public int getHoras() {
+    public Hora getHoras() {
         return horas;
     }
-    public void setHoras(int horas) {
-        this.horas = Math.abs(horas);
+    public void setHoras(Hora horas) {
+        this.horas = horas;
     }
     public String getProfesision() {
         return profesision;
@@ -38,9 +41,10 @@ public class Voluntarios extends Traballadores implements GastosIngresos {
         this.Trabajo = Trabajo;
     }
     public String toString() {
-        return "Asociacion.Voluntarios{" + "Nombre=" + getNombre() + ", Dni=" + getDni() + ", DataIngreso=" + getDataIngreso() + ", Edade=" + edade + ", Horas=" + horas + ", Profesision=" + profesision + ", Trabajo=" + Trabajo + '}';
+        String v= "Voluntarios{" + "Nome=" + getNombre() + ", Dni=" + getLetraDni() + ", DataIngreso=" + getDataIngreso().toString()+ ", Edade=" + edade + ", Horas=" + horas + ", Profesision=" + profesision + ", Trabajo=" + Trabajo + '}';
+        return super.toString() + v;
     }
     public double calcularGastosIngresos(){
-       return horas;
+       return -3;
     }
 }

@@ -5,7 +5,7 @@ public class Hora {
     private int minutos;
     private int segundos;
 
-    public Hora(int horas, int minutos, int segundos) {
+    public Hora( int horas, int minutos) {
         setHora(horas, minutos, segundos);
     }
     public int getHoras() {

@@ -1,6 +1,6 @@
 package Asociacion;
 
-public class Socios extends Asociacion implements GastosIngresos {
+public class Socios extends asociacion implements GastosIngresos {
     private String Dirección;
     private String Provincia;
     private int DataAlta;

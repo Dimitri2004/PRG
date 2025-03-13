@@ -1,14 +1,14 @@
 package Asociacion;
 
 
-public class Socios extends asociacion  {
+public class Socios2 extends asociacion2 {
     private String direccion;
     private String Provincia;
     private int dataAlta;
     private int cuota;
 
 
-    public Socios(String Nombre, String Dni, String Direccion, String Provincia, int dataAlta, int cuota) {
+    public Socios2(String Nombre, String Dni, String Direccion, String Provincia, int dataAlta, int cuota) {
         super(Nombre, Dni);
         this.direccion = Direccion;
         this.Provincia = Provincia;
@@ -49,8 +49,7 @@ public class Socios extends asociacion  {
     public String toString() {
         return "Socios{" + "Nombre=" + getNombre() + ", Dni=" + getLetraDni()+ ", Direccion=" + direccion + ", Provincia=" + Provincia + ", DataAlta=" + dataAlta + ", Cuota=" + cuota + '}';
     }
-    public double calcularGastosIngresos(){
+    public double calculargastosIngresos(){
         return cuota;
-
     }
 }

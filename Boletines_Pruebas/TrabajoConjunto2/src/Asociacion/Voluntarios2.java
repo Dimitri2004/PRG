@@ -3,13 +3,13 @@ package Asociacion;
 import DataHora.Data;
 import DataHora.Hora;
 
-public class Voluntarios extends Traballadores {
+public class Voluntarios2 extends Traballadores2 {
     private int edade;
     private Hora horas;
     private String profesision;
     private String Trabajo;
 
-    public Voluntarios(String Nombre, String Dni, Data dataIngreso, int edade, Hora horas, String profesision, String Trabajo) {
+    public Voluntarios2(String Nombre, String Dni, Data dataIngreso, int edade, Hora horas, String profesision, String Trabajo) {
         super(Nombre, Dni, dataIngreso);
         setEdade(edade);
         setHoras(horas);
@@ -44,7 +44,7 @@ public class Voluntarios extends Traballadores {
         String v= "Voluntarios{" + "Nome=" + getNombre() + ", Dni=" + getLetraDni() + ", DataIngreso=" + getDataIngreso().toString()+ ", Edade=" + edade + ", Horas=" + horas + ", Profesision=" + profesision + ", Trabajo=" + Trabajo + '}';
         return super.toString() + v;
     }
-    public double calcularGastosIngresos(){
-       return -3;
+    public double calculargastosIngresos(){
+       return -3.0;
     }
 }

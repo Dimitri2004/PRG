@@ -1,6 +1,7 @@
 package Asociacion;
 
 import DataHora.Data;
+//Class que devuelve los datos que trae de la clase abstracta de trabajadores 
 
 public class Asalariados extends Traballadores {
     private double soldo;
@@ -14,6 +15,7 @@ public class Asalariados extends Traballadores {
     public double getSoldo() {
         return soldo;
     }
+    
     public void setSoldo(double soldo) {
         this.soldo = Math.abs(soldo);
     }
@@ -27,6 +29,7 @@ public class Asalariados extends Traballadores {
         String a= "Asalariados{" + "Nome=" + getNombre() + ", Dni=" + getLetraDni() + ", DataIngreso=" + getDataIngreso().toString()+ ", Soldo=" + soldo + ", Cargo=" + cargo + '}';
         return super.toString() + a;
     }
+    //calcula los gastos e ingresos en las variables en las que implementamos la interfaz calcularGastosIngresos
     public double calcularGastosIngresos(){
         return -soldo -soldo*15/100;
     }

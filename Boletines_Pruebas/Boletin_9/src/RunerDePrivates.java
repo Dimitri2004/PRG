@@ -25,9 +25,10 @@ public class RunerDePrivates {
         lista2.engadirPrimeiro(3);
         lista2.engadirUltimo(15);
 
-
         //Mostrar valores
         lista2.mostrarValores();
+
+
 
 
 

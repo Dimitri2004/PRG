@@ -80,11 +80,11 @@ public class Lista2 {
         if (!estaVacia()) {
             if (size != 1) {
                 Nodo nodoActual = nodoInicial;
-            while (nodoActual.getNodoSeguinte() != null) {
-                    System.out.println(nodoActual.getvalor());
-                    nodoActual = nodoActual.getNodoSeguinte();
-            }
-            System.out.println(nodoActual.getvalor());
+            do{
+                System.out.println(nodoActual.getvalor());
+                nodoActual = nodoActual.getNodoSeguinte();
+            } while (nodoActual != null);
+
             }
             else System.out.println(nodoInicial.getvalor());
         }

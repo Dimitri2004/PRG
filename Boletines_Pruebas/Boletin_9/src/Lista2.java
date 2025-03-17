@@ -76,6 +76,22 @@ public class Lista2 {
         }
     }
     //mostrar valores
+    public void mostrarValores() {
+        if (!estaVacia()) {
+            if (size != 1) {
+                Nodo nodoActual = nodoInicial;
+            while (nodoActual.getNodoSeguinte() != null) {
+        System.out.println(nodoActual.getvalor());
+        nodoActual = nodoActual.getNodoSeguinte();
+                }
+            } else {
+                System.out.println(nodoInicial.getvalor());
+            }
+        }else{
+            System.out.println("La lista está vacía");
+        }
+
+    }
 
 
 

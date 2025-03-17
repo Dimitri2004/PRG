@@ -21,14 +21,12 @@ public class RunerDePrivates {
 
         //queremos un nuevo nodo que añada uno inicial y quite uno inicial
         Lista2 lista2 = new Lista2();
-        //añadir primero
-        lista2.engadirPrimeiro(0);
-        lista2.engadirPrimeiro(1);
-        lista2.engadirPrimeiro(2);
+        lista2.engadirPrimeiro(5);
+        lista2.engadirPrimeiro(10);
+        lista2.engadirPrimeiro(15);
 
-        //quitar anterior
-        lista2.quitarAnterior();
-        System.out.println("Tamaño: " + lista2.getTamaño());
+        System.out.println("Tamaño: " + lista2.mostrarValores(););
+
 
 
 

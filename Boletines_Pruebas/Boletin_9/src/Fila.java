@@ -1,16 +1,16 @@
 public class Fila extends Lista2 implements Cola {
 
-    public Fila( Nodo nodoInicial) {
-        super( nodoInicial);
+    public Fila( ) {
+        super( );
     }
     @Override
-    public void encolar(int valor) {
-        engadirUltimo(valor);
+    public void encolar(int nuevovalor) {
+       super.engadirUltimo(nuevovalor);
     }
 
     @Override
     public void desencolar() {
-        quitarPrimeiro();
+        super.quitarPrimeiro();
     }
 
 

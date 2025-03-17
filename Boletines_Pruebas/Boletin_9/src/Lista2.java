@@ -40,6 +40,25 @@ public class Lista2 {
             size++;
         }
     }
+    //quitar el ultimo
+    public void quitarUltimo() {
+        if (estaVacia()) {
+            System.out.println("La lista está vacía");
+        } else {
+            Nodo nodoAnterior = null;
+            if (size != 1) {
+                Nodo nodoActual = nodoInicial;
+                while (nodoActual.getNodoSeguinte() != null) {
+                    nodoAnterior = nodoActual;
+                    nodoActual = nodoActual.getNodoSeguinte();
+                }
+                nodoAnterior.setNodoSeguinte(null);
+            } else {
+                nodoInicial = null;
+            }
+            size--;
+        }
+    }
     //añadir primero
     public void engadirPrimeiro(int valor) {
         Nodo novoNodo = new Nodo(valor, nodoInicial);//creas un nuevo nodo apuntando al nodo inicial

@@ -18,7 +18,7 @@ public class RunerDePrivates {
         System.out.println("Voumen do Cilindro: "+cilindro1.calcularVolumen());
     */
 
-
+/*
         //queremos un nuevo nodo que añada uno inicial y quite uno inicial
         Lista2 lista2 = new Lista2(new Nodo(1,null));
         //Añadir valores
@@ -27,6 +27,14 @@ public class RunerDePrivates {
 
         //Mostrar valores
         lista2.mostrarValores();
+
+        //Quitar valores
+        lista2.quitarPrimeiro();
+        lista2.quitarUltimo();
+        lista2.mostrarValores();
+        */
+
+        //Fila
 
 
 

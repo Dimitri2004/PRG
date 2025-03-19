@@ -35,6 +35,12 @@ public class RunerDePrivates {
         */
 
         //Fila
+        Fila fila = new Fila(new Nodo(0,null));
+        fila.encolar(1);
+
+
+        fila.desencolar();
+        fila.mostrarValores();
 
 
 

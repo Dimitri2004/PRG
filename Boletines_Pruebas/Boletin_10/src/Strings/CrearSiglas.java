@@ -3,7 +3,7 @@ package Strings;
 public class CrearSiglas {
     //cro una funcion que realice la comprobacion y otra donde se desarrolla el ejercicio
     public static void main(String[] args) {
-        String cadena = "    Universal         Serial Bus     ";
+        String cadena = "Universal    Serial        Bus";
 
         System.out.println("Las siglas de la cadena son: " + comprobarSiglas(corregirEspacios(cadena)));
     }

@@ -1,9 +1,8 @@
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Main {
-    public static void main(String[] args) {
-
+public class FileRider {
+    public FileRider(String rutaArchivo) {
         String texto="";
         FileReader entrada = null;
         try {

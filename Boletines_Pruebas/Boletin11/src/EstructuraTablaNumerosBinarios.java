@@ -5,7 +5,7 @@ public class EstructuraTablaNumerosBinarios {
 EstructuraTablaNumerosBinarios (int[] tabla) {
     ObjectOutputStream fluxosalida = null;
     try{
-        fluxosalida = new ObjectOutputStream(new FileOutputStream());
+        fluxosalida = new ObjectOutputStream(new FileOutputStream( "numeros.bin"));
 
     }
     catch (Exception e){

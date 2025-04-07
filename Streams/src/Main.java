@@ -28,4 +28,6 @@ public class Main {
         System.out.println("Texto leido: \n" + texto);
     }
 
+    // int[] tabla = {1, 2, 3, 4, 5};
+
 }

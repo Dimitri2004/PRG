@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 public class EstructuraTablaNumerosBinarios {
-EstructuraTablaNumerosBinarios (int[] tabla) {
+EstructuraTablaNumerosBinarios(int[] tabla) {
     ObjectOutputStream fluxosalida = null;
     try{
         fluxosalida = new ObjectOutputStream(new FileOutputStream( "numeros.data"));
@@ -32,7 +32,4 @@ EstructuraTablaNumerosBinarios (int[] tabla) {
 
 
 }
-
-
-
 }

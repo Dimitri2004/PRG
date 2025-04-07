@@ -11,7 +11,7 @@ public Boletin11_1_Deportista(String nome, String direcccion, String Dni, String
 
     public String getDeporte() {
 
-    setDeporte(deporte);
+
         return deporte;
     }
 
@@ -25,6 +25,7 @@ public Boletin11_1_Deportista(String nome, String direcccion, String Dni, String
             if (deporte.length() != 3) {
                 throw new Exception("O deporte ten que ter 3 caracteres");
             } else {
+                System.out.println("O deporte está correcto");
                 this.deporte = deporte;
             }
         } catch (Exception e) {

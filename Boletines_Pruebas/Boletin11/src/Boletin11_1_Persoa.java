@@ -1,10 +1,9 @@
-public class Boletin11_1_Persoa {
-    public static class Persoa{
+public abstract class Boletin11_1_Persoa {
         private String nome;
         private String direcccion;
         private String Dni;
 
-        public Persoa(String nome, String direcccion, String Dni) {
+        public Boletin11_1_Persoa(String nome, String direcccion, String Dni) {
             setNome(nome);
             setDirecccion(direcccion);
             setDni(Dni);
@@ -43,5 +42,9 @@ public class Boletin11_1_Persoa {
         public void setNome(String nome) {
             this.nome = nome;
         }
-    }
+
+        public  String aCadena(){
+            return "Nome: "+getNome()+"\nDNI: "+getDni()+"\nDirección: "+getDirecccion();
+        }
+
 }

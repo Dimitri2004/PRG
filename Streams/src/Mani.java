@@ -10,11 +10,5 @@ public class Mani {
         new LectorDeParesImpares("numerosPares.data");
 
         new EstructuraNumericoParaDistribucion(tabla);
-
-
-        //new LectorDeParesImpares();
-
-
-
     }
 }

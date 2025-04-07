@@ -2,10 +2,10 @@ import javax.imageio.IIOException;
 import java.io.*;
 
 public class LecturaTablaNumerosBinarios {
-    public LecturaTablaNumerosBinarios (String rutafFichero){
+    public LecturaTablaNumerosBinarios (String rutaFichero){
         ObjectInputStream flujoentrada = null;
         try {
-            flujoentrada = new ObjectInputStream(new FileInputStream(rutafFichero));
+            flujoentrada = new ObjectInputStream(new FileInputStream(rutaFichero));
             while (true){
                 System.out.println(flujoentrada.readInt());
            }

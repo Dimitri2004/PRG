@@ -1,0 +1,2 @@
+public class EscrituraFicheroSocios {
+}

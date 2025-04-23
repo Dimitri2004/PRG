@@ -17,7 +17,7 @@ EstructuraTablaNumerosBinarios(int[] tabla) {
     }  catch (FileNotFoundException e) {
         System.out.println("Error: " + e.getMessage());
     }  catch (IOException e) {
-        System.out.println("Error: " + e.getMessage());
+        System.out.println("Error : " + e.getMessage());
     }
     finally{
         try{

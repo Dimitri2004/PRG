@@ -25,10 +25,5 @@ public class DatosCliente {
                 System.out.println("Error e/s: " + e.getMessage());
             }
         }
-
-
     }
-
-
-
 }

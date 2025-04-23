@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Contedor<Integer> num = new Contedor<Integer>();
+        num.guardar(5);
+        System.out.println(num.extraer());
     }
 }

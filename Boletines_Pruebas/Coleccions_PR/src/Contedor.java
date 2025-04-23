@@ -8,7 +8,7 @@ public class Contedor <T>  {
 
     T extraer(){
         T res =objeto;
-        objeto=null;
+        objeto = null;
         return res;
     }
 }

@@ -2,9 +2,11 @@ public class Main {
     public static void main(String[] args) {
         Contedor<Integer> num = new Contedor<Integer>();
         num.guardar(5);
-        System.out.println(num.extraer());
+        Integer n=num.extraer();
+        System.out.println(n);
         Contedor<String> cod=new Contedor<String>();
         cod.guardar("Hola");
-        System.out.println(cod.extraer());
+        String c= cod.extraer();
+        System.out.println(c);
     }
 }

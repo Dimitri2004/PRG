@@ -12,3 +12,23 @@ public class Contedor <T>  {
         return res;
     }
 }
+
+
+/*
+interface nomeInterface <T> {
+---
+}
+
+public interface Comparable<T>{
+---
+}
+
+
+class nomeClase<T extends claseLimite>{
+---
+}
+
+class nomeClase<T super claseLimite>{
+---
+}
+*/

@@ -30,13 +30,21 @@ public class TratamentodeCliente {
         System.out.println(coleccionCliente.isEmpty());
         //Verifica si contiene un determinado elemento
         System.out.println(coleccionCliente.contains(unCliente));
+        //
+
+        Iterator<Cliente> indice= coleccionCliente.iterator();
+        while (indice.hasNext()) {
+            System.out.println(indice.next());
+        }
+        for (Cliente cli : coleccionCliente){
+            System.out.println(cli);
+        }
         //elimina el cliente creado que fue añadido al arrayList
         coleccionCliente.remove(unCliente);
         //elimina cualquier elemento que tenga el ArrayList
         coleccionCliente.clear();
         //Referencia a cada elemento del array
         Object[] clientes = coleccionCliente.toArray();
-        Iterator<Cliente> indice= coleccionCliente.iterator();
 
     }
 }//end class

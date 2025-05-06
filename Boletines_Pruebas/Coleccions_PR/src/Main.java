@@ -4,7 +4,10 @@ public class Main {
         num.guardar(5);
         Integer n=num.extraer();
         System.out.println(n);
-        Contedor<String> cod=new Contedor<String>();
+        Contedor<String> cod=new Contedor<>();
+        //Acepta calquer tipo de integer,double para el uso de datos genéricos
+        Contedor<?> contedorParaCalquerTipo = new Contedor<Integer>();
+        contedorParaCalquerTipo = new Contedor<Double>();
         cod.guardar("Hola");
         String c= cod.extraer();
         System.out.println(c);

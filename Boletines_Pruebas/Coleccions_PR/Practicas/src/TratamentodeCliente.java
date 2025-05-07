@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * Aprendiendo ArrayList
@@ -66,7 +63,8 @@ public class TratamentodeCliente {
         System.out.println(conjuntoClientes);
         System.out.println(conjuntoClientes.add(unCliente));
 
-        //añadimos el arrayList a un TreeSet
+
+        int ref= Collections.binarySearch(coleccionCliente, new Cliente( "00000000T","Oliver","03/06/2006"));
 
 
     }

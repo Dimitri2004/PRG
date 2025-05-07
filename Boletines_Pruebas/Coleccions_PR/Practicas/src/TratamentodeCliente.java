@@ -1,5 +1,7 @@
 import java.util.*;
 
+import static java.util.Collections.sort;
+
 /**
  * Aprendiendo ArrayList
  * @author Oliver Miguez Alonso
@@ -12,12 +14,12 @@ public class TratamentodeCliente {
         coleccionCliente = new ArrayList<>();
         //Añade al array 3 nuevos clientes, ya que la lista solo permite añadir objetos formato "CLIENTE"
         //el add devuelve true si se añadió o se modificó el tamaño del array a la lista y falso si la lista se mantiene igual y no cambia es decir si no se añade
-        coleccionCliente.add(new Cliente("00000000T","Oliver","03/06/2006"));
-        coleccionCliente.add(new Cliente("12345678Y","Pepe","02/05/2005"));
-        coleccionCliente.add(new Cliente("87654321R","Arturo","01/04/2004"));
+        coleccionCliente.add(new Cliente("00000000T", "Oliver", "03/06/2006"));
+        coleccionCliente.add(new Cliente("12345678Y", "Pepe", "02/05/2005"));
+        coleccionCliente.add(new Cliente("87654321R", "Arturo", "01/04/2004"));
 
         //creamos un nuevo cliente
-        Cliente unCliente = new Cliente("77777777W","Jaime","06/11/2000");
+        Cliente unCliente = new Cliente("77777777W", "Jaime", "06/11/2000");
         coleccionCliente.add(unCliente);//lo añadimos al arrayList
         //quitamos un cliente al arrayList
         coleccionCliente.remove(unCliente);
@@ -28,12 +30,13 @@ public class TratamentodeCliente {
         System.out.println(coleccionCliente.isEmpty());
         //Verifica si contiene un determinado elemento
         System.out.println(coleccionCliente.contains(unCliente));
-        //
 
-        Iterator<Cliente> indice= coleccionCliente.iterator();
+        Object[] Clientes = coleccionCliente.toArray();
 
-        for (; indice.hasNext();) {
-           Cliente cliente = indice.next();
+        Iterator<Cliente> indice = coleccionCliente.iterator();
+
+        for (; indice.hasNext(); ) {
+            Cliente cliente = indice.next();
             System.out.println(cliente.toString());
             //System.out.println(cliente.edade());
             //System.out.println(cliente.compareTo(unCliente));
@@ -56,15 +59,18 @@ public class TratamentodeCliente {
 //        outrosClientes.add(new Cliente("87654321R","Susi","07/04/2004"));
 
         TreeSet<Cliente> conjuntoClientes = new TreeSet<>();
-        conjuntoClientes.add(new Cliente("00000000T","Oliver","03/06/2006"));
-        coleccionCliente.add(new Cliente( "12345678Y","Pepe","02/05/2005"));
-        coleccionCliente.add(new Cliente( "87654321R","Arturo","01/04/2004"));
+        conjuntoClientes.add(new Cliente("00000000T", "Oliver", "03/06/2006"));
+        coleccionCliente.add(new Cliente("12345678Y", "Pepe", "02/05/2005"));
+        coleccionCliente.add(new Cliente("87654321R", "Arturo", "01/04/2004"));
         conjuntoClientes.add(unCliente);
         System.out.println(conjuntoClientes);
         System.out.println(conjuntoClientes.add(unCliente));
 
+    //Collections.sort(coleccionCliente, new ComparadorDni());
+    // System.out.println(coleccionCliente);
+    //int ref = Collections.binarySearch(coleccionCliente, new Cliente( "00000000T", "Oliver", "03/06/2006"),new ComparadorDni());
+    //System.out.println(ref);
 
-        int ref= Collections.binarySearch(coleccionCliente, new Cliente( "00000000T","Oliver","03/06/2006"));
 
 
     }

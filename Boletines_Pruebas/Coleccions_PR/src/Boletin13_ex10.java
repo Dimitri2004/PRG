@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -134,9 +135,25 @@ public class Boletin13_ex10 {
 
 
     public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
         Boletin13_ex10 exemplo= new Boletin13_ex10("recambiosOliver.dot");
+        int opcion;
+        do{
+            System.out.println("1.Alta Producto");
+            System.out.println("2.Baja Producto");
+            System.out.println("3.Cambio cantidade Producto");
+            System.out.println("4.Lista Productos");
+            System.out.println("5.Salir");
+            System.out.println("Introduce opcion: ");
+            opcion=sc.nextInt();
 
-
+            switch (opcion){
+                case 1 ->{
+                    System.out.println("Codigo producto: ");
+                    String ref=sc.next();
+                }
+            }
+        }while(opcion != 5);
 
 
     }

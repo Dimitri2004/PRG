@@ -4,7 +4,7 @@ import java.time.temporal.ChronoUnit;
 
 /**
  * Aprender a usar la clase LocalDate, DateTimeFormatter y la interfaz Comparable(en este caso utilizamos por ejemplo el compareTo)
- * @author Oliver Miguez Alonso
+ * @author Dima(Copiado de Oliver)
  */
 public class Cliente implements Comparable<Cliente> {
     String dni;

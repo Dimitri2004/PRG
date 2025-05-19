@@ -151,6 +151,12 @@ public class Boletin13_ex10 {
                 case 1 ->{
                     System.out.println("Codigo producto: ");
                     String ref=sc.next();
+                    exemplo.altaProducto(ref);
+                }
+                case 2 ->{
+                    System.out.println("Codigo producto: ");
+                    String ref=sc.next();
+                    exemplo.bajaProducto(ref);
                 }
             }
         }while(opcion != 5);

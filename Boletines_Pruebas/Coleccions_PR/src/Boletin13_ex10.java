@@ -157,9 +157,12 @@ public class Boletin13_ex10 {
                     System.out.println("Codigo producto: ");
                     String ref=sc.next();
                     exemplo.bajaProducto(ref);
+
                 }
             }
         }while(opcion != 5);
+
+        exemplo.guardarMapa(exemplo.existencias);
 
 
     }

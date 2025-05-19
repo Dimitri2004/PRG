@@ -1,10 +1,5 @@
-
 import java.io.*;
-
-import java.util.Iterator;
-
 import java.util.Map;
-
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -12,22 +7,25 @@ import java.util.TreeMap;
 *Creamos productos en un formato y les aplicamos lectura de fichero
 * @author Dima Aparicio
 */
-public class Boletin13_ex5_6 {
-    Map<String,Integer> existencias=new TreeMap<>();//Creamos el controller del tipo map
+public class Boletin13_ex10 {
+    Map<String,Integer> existencias;//Creamos el controller del tipo map
     String fichero;
 
-    public Map<String,Integer> cargarColeccion(){
+    public Boletin13_ex10(String fichero) {
+        this.fichero = fichero;//asignamos fichero
+        this.existencias = cargarMapa();//cargamos mapa
+    }
+
+    public Map<String,Integer> cargarMapa(){
         Map<String,Integer> ex= new TreeMap<>();
         ObjectInputStream fEntrada=null;
         try{
            fEntrada = new ObjectInputStream(new FileInputStream(fichero)); //Queremos convertirlo en una serie de bits para leerlos
-            while(true){
-              Peza  peza  = (Peza) fEntrada.readObject(); //recoge los datos de tipo Pieza y los lee hasta que se quede sin datos
-                if (peza == null) break;
-                ex.put(peza.referencia, peza.cantidad);
-            }
+              ex  = (Map<String, Integer>) fEntrada.readObject(); //recoge los datos de tipo Pieza y los lee hasta que se quede sin datos
+
         } catch (FileNotFoundException e) {
             System.out.println("Error archivo no creado "+e);
+            ex= new TreeMap<String,Integer>();
         }catch (IOException | ClassNotFoundException e){
             System.out.println("Error objeto/class no encontrado "+e);
         }
@@ -43,7 +41,7 @@ public class Boletin13_ex5_6 {
         return ex;
     }//fin cargar Mapa
 
-    public void guardarColeccion(Map<String,Integer> existencias){
+    public void guardarMapa(Map<String,Integer> existencias){
         ObjectOutputStream fSalida=null;
         try {
             fSalida = new ObjectOutputStream(new FileOutputStream(fichero)); //Queremos convertirlo en una serie de bits para escribirlos
@@ -67,9 +65,7 @@ public class Boletin13_ex5_6 {
         ObjectOutputStream fSalida=null;
         try{
             fSalida = new ObjectOutputStream(new FileOutputStream(fichero)); //Queremos convertirlo en una serie de bits para leerlos
-
             Set<String> referencias = existencias.keySet();
-
             for (String s: referencias){
                 Peza p=new Peza(s,existencias.get(s));
                 fSalida.writeObject(p);
@@ -100,6 +96,29 @@ public class Boletin13_ex5_6 {
 
     }//fin guardarCollection()
 
+
+    public boolean altaProducto( String referencia){
+        if (existencias.containsKey(referencia)) return false;
+        else{
+            existencias.put(referencia,0);//Primera posicion
+            return true;
+        }
+    }
+
+    public boolean bajaProducto( String referencia){
+        if (!existencias.containsKey(referencia)) return false;
+        else{
+            existencias.remove(referencia);//Primera posicion
+            return true;
+        }
+    }
+    public boolean cambioStock(String referencia,int cantidade){
+        if (!existencias.containsKey(referencia)) return false;
+        else{
+            existencias.replace(referencia,cantidade);
+            return true;
+        }
+    }
     private class Peza implements Serializable{
 
         String referencia;
@@ -115,8 +134,14 @@ public class Boletin13_ex5_6 {
 
 
     public static void main(String[] args){
+        Boletin13_ex10 exemplo= new Boletin13_ex10("recambiosOliver.dot");
+
 
 
 
     }
+
+
+
+
 }

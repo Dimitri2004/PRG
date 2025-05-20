@@ -14,7 +14,8 @@ public class Boletin13_ex10 {
 
     public Boletin13_ex10(String fichero) {
         this.fichero = fichero;//asignamos fichero
-        this.existencias = cargarMapa();//cargamos mapa
+        //this.existencias = cargarMapa();//cargamos mapa
+        guardarCollection();
     }
 
     public Map<String,Integer> cargarMapa(){
@@ -42,7 +43,7 @@ public class Boletin13_ex10 {
         return ex;
     }//fin cargar Mapa
 
-    public void guardarMapa(Map<String,Integer> existencias){
+    public void cargarCollection(Map<String,Integer> existencias){
         ObjectOutputStream fSalida=null;
         try {
             fSalida = new ObjectOutputStream(new FileOutputStream(fichero)); //Queremos convertirlo en una serie de bits para escribirlos
@@ -120,7 +121,8 @@ public class Boletin13_ex10 {
             return true;
         }
     }
-    private class Peza implements Serializable{
+
+    public class Peza implements Serializable{
 
         String referencia;
         Integer cantidad;
@@ -137,6 +139,7 @@ public class Boletin13_ex10 {
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         Boletin13_ex10 exemplo= new Boletin13_ex10("recambiosOliver.dot");
+        Boletin13_ex10 exemplo2=new Boletin13_ex10("recambiosManuela.odt");
         int opcion;
         do{
             System.out.println("1.Alta Producto");
@@ -151,18 +154,28 @@ public class Boletin13_ex10 {
                 case 1 ->{
                     System.out.println("Codigo producto: ");
                     String ref=sc.next();
-                    exemplo.altaProducto(ref);
+                    exemplo2.altaProducto(ref);
                 }
                 case 2 ->{
-                    System.out.println("Codigo producto: ");
-                    String ref=sc.next();
-                    exemplo.bajaProducto(ref);
-
+                    System.out.println("Que producto queremos eliminar");
+                    String ref = sc.next();
+                    exemplo2.bajaProducto(ref);
                 }
+                case 3->{
+                    System.out.println("Que producto quieres cambiar");
+                    String ref= sc.next();
+                    System.out.println("Cuanta cantidad");
+                    int cantidad=sc.nextInt();
+                    exemplo2.cambioStock(ref,cantidad);
+                }
+                case 4->{
+                    System.out.println(exemplo2.existencias);
+                }
+
             }
         }while(opcion != 5);
 
-        exemplo.guardarMapa(exemplo.existencias);
+        exemplo.cargarCollection(exemplo2.existencias);
 
 
     }

@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.io.*;
 import java.util.Map;
 import java.util.Scanner;
@@ -9,61 +10,70 @@ import java.util.TreeMap;
 * @author Dima Aparicio
 */
 public class Boletin13_ex10 {
-    Map<String,Integer> existencias;//Creamos el controller del tipo map
+    Map<String, Integer> existencias;//Creamos el controller del tipo map
     String fichero;
 
     public Boletin13_ex10(String fichero) {
         this.fichero = fichero;//asignamos fichero
         //this.existencias = cargarMapa();//cargamos mapa
-        guardarCollection();
+        this.existencias = cargarCollection();
     }
 
-    public Map<String,Integer> cargarMapa(){
-        Map<String,Integer> ex= new TreeMap<>();
-        ObjectInputStream fEntrada=null;
-        try{
-           fEntrada = new ObjectInputStream(new FileInputStream(fichero)); //Queremos convertirlo en una serie de bits para leerlos
-              ex  = (Map<String, Integer>) fEntrada.readObject(); //recoge los datos de tipo Pieza y los lee hasta que se quede sin datos
+    public Map<String, Integer> cargarMapa() {
+        Map<String, Integer> ex = new TreeMap<>();
+        ObjectInputStream fEntrada = null;
+        try {
+            fEntrada = new ObjectInputStream(new FileInputStream(fichero)); //Queremos convertirlo en una serie de bits para leerlos
+            ex = (Map<String, Integer>) fEntrada.readObject(); //recoge los datos de tipo Pieza y los lee hasta que se quede sin datos
 
         } catch (FileNotFoundException e) {
-            System.out.println("Error archivo no creado "+e);
-            ex= new TreeMap<String,Integer>();
-        }catch (IOException | ClassNotFoundException e){
-            System.out.println("Error objeto/class no encontrado "+e);
+            System.out.println("Error archivo no creado " + e);
+            ex = new TreeMap<String, Integer>();
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Error objeto/class no encontrado " + e);
+        } finally {
+            try {
+                if (fEntrada != null) {
+                    fEntrada.close();//cerramos el lector
+                }
+            } catch (IOException e) {
+                System.out.println("Error " + e);
+            }
+        }
+        return ex;
+    }//fin cargar Mapa
+
+    public Map<String, Integer> cargarCollection() {
+        Map<String, Integer> ex = new TreeMap<>();
+        ObjectInputStream fEntrada = null;
+        try {
+            fEntrada = new ObjectInputStream(new FileInputStream(fichero)); //Queremos convertirlo en una serie de bits para escribirlos
+
+            while (true) {
+                Peza peza = (Peza) fEntrada.readObject();
+                if (peza == null)break;
+                ex.put( peza.referencia, peza.cantidad);
+
+            }
+        }catch( ClassNotFoundException e ) {
+            System.out.println("Error clase erro "+e);
+         }catch( FileNotFoundException e){
+        System.out.println("No encontrado el archivo " + e);
+        } catch(IOException e){
+            System.out.println("Error salida/entrada "+e);
         }
         finally {
             try {
                 if (fEntrada != null) {
-                    fEntrada.close();//cerramos el lector
+                    fEntrada.close();//cerramos el escritor
                 }
             }catch (IOException e){
                 System.out.println("Error "+e);
             }
         }
         return ex;
-    }//fin cargar Mapa
-
-    public void cargarCollection(Map<String,Integer> existencias){
-        ObjectOutputStream fSalida=null;
-        try {
-            fSalida = new ObjectOutputStream(new FileOutputStream(fichero)); //Queremos convertirlo en una serie de bits para escribirlos
-            fSalida.writeObject(existencias); //recoge los datos de tipo Pieza y los escribimos
-        }catch (FileNotFoundException e){
-            System.out.println("No encontrado el archivo "+e);
-        } catch (IOException e) {
-            System.out.println("Error salida/entrada "+e);
-        }
-        finally {
-            try {
-                if (fSalida != null) {
-                    fSalida.close();//cerramos el escritor
-                }
-            }catch (IOException e){
-                System.out.println("Error "+e);
-            }
-        }
     }//fin guardar Mapa
-    public void guardarCollection(){
+    public void guardarCollection(Map<String,Integer> existencias){
         ObjectOutputStream fSalida=null;
         try{
             fSalida = new ObjectOutputStream(new FileOutputStream(fichero)); //Queremos convertirlo en una serie de bits para leerlos
@@ -175,7 +185,7 @@ public class Boletin13_ex10 {
             }
         }while(opcion != 5);
 
-        exemplo.cargarCollection(exemplo2.existencias);
+        exemplo.guardarCollection(exemplo2.existencias);
 
 
     }
